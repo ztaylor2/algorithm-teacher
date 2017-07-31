@@ -3,6 +3,10 @@
   color: white;
 }
 
+* {
+  outline: dashed orange 1px;
+}
+
 form {
   border: 1px solid black;
   max-width: 600px;
