@@ -1,0 +1,47 @@
+/** {
+  font-family: Helvetica, sans-serif;
+  outline: 1px dashed orange;
+} */*/
+
+nav {
+  color: green;
+  padding-bottom: 50px;
+  float: left;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline;
+}
+
+div {
+  margin: 20px 10px
+  border: green bold;
+}
+
+div s1 {
+  margin: 20px 10px 10px 40px;
+}
+/*section {
+  outline: 1px dashed green;
+}*/
+
+.algorithm {
+  color: blue;
+  font-weight: bold;
+  border: 2px powder blue;
+}
+
+/*section.s2 {
+  outline: 1px dashed black;
+}*/
+
+.ui {
+  font: forestgreen;
+  font-weight: bold;
+}
+
+footer {
+  margin: 5px 20px;
+  outline: dashed forestgreen;
+}
