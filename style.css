@@ -2,3 +2,25 @@
   background-color: black;
   color: white;
 }
+
+form {
+  border: 1px solid black;
+  max-width: 600px;
+  margin: auto;
+}
+
+#submitButton {
+  margin: auto;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 50px;
+}
+
+svg {
+  float: left;
+  display: inline-block;
+  width: 50px;
+}
