@@ -5,24 +5,16 @@ var playButton = document.getElementById('playButton');
 
 
 var boxes = document.getElementById('boxesContainer').children;
+var nums = document.getElementById('numberInputs').children;
 
 
 // event handler
 function sortNums(e) {
   e.preventDefault();
 
-  // put input values into array
-  var nums = [];
-  nums.push(parseInt(document.getElementById('num1').value));
-  nums.push(parseInt(document.getElementById('num2').value));
-  nums.push(parseInt(document.getElementById('num3').value));
-  nums.push(parseInt(document.getElementById('num4').value));
-  nums.push(parseInt(document.getElementById('num5').value));
-  console.log(nums);
-
   // set initial heights of boxes
   for(var i = 0; i < nums.length; i++) {
-    boxes[i].height = nums[i];
+    boxes[i].height = parseInt(nums[i].value);
   }
 }
 
@@ -37,7 +29,7 @@ function nextStep(e) {
   }
   loopIndex++;
 
-  if (loopIndex === 4) {
+  if (loopIndex === boxes.length - 1) {
     loopIndex = 0;
     console.log(loopIndex, 'set to zero');
   }
