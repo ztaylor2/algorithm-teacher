@@ -1,0 +1,39 @@
+.box1 {
+  border: 1px solid black;
+  width: 50px;
+  height: 200px;
+  display: inline-block;
+  text-align: center;
+}
+
+.box2 {
+  border: 1px solid black;
+  width: 50px;
+  height: 300px;
+  display: inline-block;
+  text-align: center;
+}
+
+.box3 {
+  border: 1px solid black;
+  width: 50px;
+  height: 400px;
+  display: inline-block;
+  text-align: center;
+}
+
+.box4 {
+  border: 1px solid black;
+  width: 50px;
+  height: 500px;
+  display: inline-block;
+  text-align: center;
+}
+
+.box5 {
+  border: 1px solid black;
+  width: 50px;
+  height: 600px;
+  display: inline-block;
+  text-align: center;
+}
