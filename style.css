@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 .box {
   background-color: black;
   color: white;
@@ -20,7 +24,15 @@ input {
 }
 
 svg {
-  float: left;
-  display: inline-block;
-  width: 50px;
+  width: 500px;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
+
+rect {
+  display: table-cell;
+  margin: 50px;
+  position: relative;
+  left: 20px;
 }

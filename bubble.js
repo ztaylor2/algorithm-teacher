@@ -1,37 +1,48 @@
 'use strict';
 
 var submitButton = document.getElementById('submitButton');
-
-var box1 = document.getElementById('box1');
-var box2 = document.getElementById('box2');
-var box3 = document.getElementById('box3');
-var box4 = document.getElementById('box4');
-var box5 = document.getElementById('box5');
-
-// var box1height = box1.getAttribute('height');
+var playButton = document.getElementById('playButton');
 
 
-
+var boxes = document.getElementById('boxesContainer').children;
 
 
 // event handler
 function sortNums(e) {
   e.preventDefault();
 
-  var num1 = parseInt(document.getElementById('num1').value);
-  var num2 = parseInt(document.getElementById('num2').value);
-  var num3 = parseInt(document.getElementById('num3').value);
-  var num4 = parseInt(document.getElementById('num4').value);
-  var num5 = parseInt(document.getElementById('num5').value);
+  // put input values into array
+  var nums = [];
+  nums.push(parseInt(document.getElementById('num1').value));
+  nums.push(parseInt(document.getElementById('num2').value));
+  nums.push(parseInt(document.getElementById('num3').value));
+  nums.push(parseInt(document.getElementById('num4').value));
+  nums.push(parseInt(document.getElementById('num5').value));
+  console.log(nums);
 
-  box1.setAttribute('height', num1);
-  box2.setAttribute('height', num2);
-  box3.setAttribute('height', num3);
-  box4.setAttribute('height', num4);
-  box5.setAttribute('height', num5);
+  // set initial heights of boxes
+  for(var i = 0; i < nums.length; i++) {
+    boxes[i].height = nums[i];
+  }
+}
+
+function nextStep(e) {
+  var swapped;
+  do {
+    swapped = false;
+    for (var i = 0; i < boxes.length - 1; i++) {
+      if (boxes[i].height > boxes[i + 1].height) {
+        console.log('true');
+        var temp = boxes[i].height;
+        boxes[i].height = boxes[i + 1].height;
+        boxes[i + 1].height = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
 }
 
 
-
 // event listener
-submitButton.addEventListener('click', sortNums)
+submitButton.addEventListener('click', sortNums);
+playButton.addEventListener('click', nextStep);
