@@ -26,20 +26,21 @@ function sortNums(e) {
   }
 }
 
+var loopIndex = 0;
+
 function nextStep(e) {
-  var swapped;
-  do {
-    swapped = false;
-    for (var i = 0; i < boxes.length - 1; i++) {
-      if (boxes[i].height > boxes[i + 1].height) {
-        console.log('true');
-        var temp = boxes[i].height;
-        boxes[i].height = boxes[i + 1].height;
-        boxes[i + 1].height = temp;
-        swapped = true;
-      }
-    }
-  } while (swapped);
+  if (boxes[loopIndex].height > boxes[loopIndex + 1].height) {
+    var temp = boxes[loopIndex].height;
+    boxes[loopIndex].height = boxes[loopIndex + 1].height;
+    boxes[loopIndex + 1].height = temp;
+    console.log(loopIndex, 'still in loop');
+  }
+  loopIndex++;
+
+  if (loopIndex === 4) {
+    loopIndex = 0;
+    console.log(loopIndex, 'set to zero');
+  }
 }
 
 
