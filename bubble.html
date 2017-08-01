@@ -11,15 +11,14 @@
 
     <!-- form to input numbers -->
     <form>
-      <p>Input five numbers here:</p>
-      <section id="numberInputs">
-        <input  id="num1" name="usrname" type="number" min="0" max="200" required>
-        <input  id="num2" type="number" min="0" max="200" required>
-        <input  id="num3" type="number" min="0" max="200" required>
-        <input  id="num4" type="number" min="0" max="200" required>
-        <input  id="num5" type="number" min="0" max="200" required>
-      </section>
-
+      <p>Input five numbers ranging from 1 to 100 here:</p>
+        <section id="numberInputs">
+          <input  id="num1" type="number">
+          <input  id="num2" type="number">
+          <input  id="num3" type="number">
+          <input  id="num4" type="number">
+          <input  id="num5" type="number">
+        </section>
       <br />
       <button type="submit" id="submitButton" class="submitButton"><span>Submit</span></button>
     </form>
@@ -29,16 +28,24 @@
 
       <section id="boxesContainer">
 
-        <img class="box" id="box1" height="200px" width="30px" x="0"  writable="true">
-        <img class="box" id="box2" height="200px" width="30px" x="100"  writable="true">
-        <img class="box" id="box3" height="200px" width="30px" x="200"  writable="true">
-        <img class="box" id="box4" height="200px" width="30px" x="300"  writable="true">
-        <img class="box" id="box5" height="200px" width="30px" x="400"  writable="true">
+        <img class="box" id="box1" height="100px" width="30px" x="0"  writable="true">
+        <img class="box" id="box2" height="100px" width="30px" x="100"  writable="true">
+        <img class="box" id="box3" height="100px" width="30px" x="200"  writable="true">
+        <img class="box" id="box4" height="100px" width="30px" x="300"  writable="true">
+        <img class="box" id="box5" height="100px" width="30px" x="400"  writable="true">
+
+        <ul id="indexIndicator">
+          <li id="indexZero">[0]</li>
+          <li id="indexOne">[1]</li>
+          <li id="indexTwo">[2]</li>
+          <li id="indexThree">[3]</li>
+          <li id="indexFour">[4]</li>
+        </ul>
 
       </section>
 
       <button type="submit" id="playButton" class="submitButton"><span>Next Step</span></button>
-      <p id="description">First, it will compaire the value of the first two numbers in the array.  If the number at [1] is greater than the number at [0], the numbers will swap, moving the lower number to the left.</p>
+      <p id="description">First, it will compaire the value of the first two numbers in the array.  If the number at [1] is less than the number at [0], the numbers will swap, moving the lower number to the left.</p>
 
     </section>
 
