@@ -9,10 +9,6 @@ h1 {
   color: white;
 }
 
-* {
-  outline: dashed orange 1px;
-}
-
 form {
   border: 1px solid black;
   border-radius: 5px;
@@ -26,6 +22,7 @@ form {
   padding: 15px;
   display: block;
   margin: auto;
+  margin-top: 10px;
   border: none;
   border-radius: 5px;
   background-color: #4CAF50;
@@ -79,4 +76,57 @@ input {
 
 #playButton {
   margin-top: 20px;
+}
+
+#indexIndicator {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  list-style-type: none;
+}
+
+#indexIndicator li {
+  display: block;
+  float: left;
+  margin: 0;
+  width: 1px;
+}
+
+#indexZero {
+  padding-left: 7px;
+}
+
+#indexOne {
+  padding-left: 33px;
+}
+
+#indexTwo {
+  padding-left: 32px;
+}
+
+#indexThree {
+  padding-left: 33px;
+}
+
+#indexFour {
+  padding-left: 34px;
+}
+
+#numberInputs {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#homeLink {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: black;
+}
+
+#homeLink:hover {
+  color: #4CAF50;
 }
