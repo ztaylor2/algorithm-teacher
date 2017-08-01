@@ -94,3 +94,4 @@ function resetNums() {
 submitButton.addEventListener('click', displayBoxes);
 playButton.addEventListener('click', nextStep);
 resetButton.addEventListener('click', resetNums);
+
