@@ -47,9 +47,10 @@ function shuffle(event) {
   }
 }
 
+/*________________________ function to first display cards ____________________*/
+
 function displayCards() {
   buildDeck();
-  // shuffle(deck);
   var content = document.getElementById('cards-div');
   for(var i = 0; i < deck.length; i++){
     var img = document.createElement('img');
