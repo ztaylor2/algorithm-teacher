@@ -47,23 +47,26 @@ var loopIndex = 0;
 var descriptionIndex = 0;
 
 function nextStep() {
-  if (boxes[loopIndex].height > boxes[loopIndex + 1].height) {
-    var temp = boxes[loopIndex].height;
-    boxes[loopIndex].height = boxes[loopIndex + 1].height;
-    boxes[loopIndex + 1].height = temp;
-    console.log(loopIndex, 'still in loop');
-  }
 
-  description.textContent = descriptionTextContent[descriptionIndex];
-  if (descriptionIndex < 5) {
-    descriptionIndex++;
-  }
+  if (num1.value === '' || num2.value === '' || num3.value === '' || num4.value === '' || num5.value === '') {
+    alert('Input numbers first.');
+  } else {
+      if(boxes[loopIndex].height > boxes[loopIndex + 1].height) {
+        var temp = boxes[loopIndex].height;
+        boxes[loopIndex].height = boxes[loopIndex + 1].height;
+        boxes[loopIndex + 1].height = temp;
+      }
 
-  loopIndex++;
+      description.textContent = descriptionTextContent[descriptionIndex];
+      if(descriptionIndex < 5) {
+        descriptionIndex++;
+      }
 
-  if (loopIndex === boxes.length - 1) {
-    loopIndex = 0;
-    console.log(loopIndex, 'set to zero');
+      loopIndex++;
+
+      if(loopIndex === boxes.length - 1) {
+        loopIndex = 0;
+      }
   }
 }
 
