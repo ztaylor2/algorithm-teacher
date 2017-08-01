@@ -31,7 +31,9 @@ function shuffle(event) {
     tempValue = deck[currentIndex];
     deck[currentIndex] = deck[randomIndex];
     deck[randomIndex] = tempValue;
+
     displayShuffle(currentIndex, randomIndex);
+
     if (pressPlay === true && currentIndex !== 0){
       play();
     } else if (pressPlay === true && currentIndex === 0) {
