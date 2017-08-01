@@ -23,7 +23,6 @@ function buildDeck(){
 /*Fisher-Yates shuffle based on stackoverflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 */
 function shuffle(event) {
-  // event.preventDefault();
   var tempValue;
   var randomIndex;
   if (currentIndex !== 0){
@@ -103,9 +102,6 @@ function displayShuffle(currentIndex, randomIndex) {
 }
 
 function highlight(currentIndex, randomIndex){
-  // event.preventDefault();//neccessary??
-  console.log('current card' + currentIndex);
-  console.log('random card' + randomIndex);
 
   document.getElementById('card' + currentIndex).style.transform = 'scale3d(1.4, 1.4, 1)';
   document.getElementById('card' + currentIndex).style.opacity = '1';
