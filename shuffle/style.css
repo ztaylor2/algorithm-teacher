@@ -18,10 +18,21 @@
   transform: scale3d(1.4, 1.4, 1);
 }
 
-/*#card6 {
-  box-shadow: 0px 0px 100px #000000;
-  z-index: 2;
-  opacity: 1;
-  -webkit-transform: scale3d(1.4, 1.4, 1);
-  transform: scale3d(1.4, 1.4, 1);
-}*/
+#buttons {
+  /*margin: 0 auto;*/
+  width: 1160px;
+  text-align: center;
+
+}
+
+#step {
+margin: 10px 5px;
+height: 40px;
+width: 70px;
+}
+
+#play {
+  margin: 10px 5px;
+  height: 40px;
+  width: 70px;
+}
