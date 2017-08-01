@@ -1,3 +1,9 @@
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
 .box {
   background-color: black;
   color: white;
@@ -5,12 +11,45 @@
 
 form {
   border: 1px solid black;
-  max-width: 600px;
+  border-radius: 5px;
+  max-width: 486px;
   margin: auto;
+  padding: 20px;
 }
 
-#submitButton {
+.submitButton {
+  cursor: pointer;
+  padding: 15px;
+  display: block;
   margin: auto;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+}
+
+.submitButton span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submitButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submitButton:hover span {
+  padding-right: 25px;
+}
+
+.submitButton:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 input {
@@ -19,8 +58,75 @@ input {
   width: 50px;
 }
 
-svg {
+#boxesContainer {
+  display: block;
+  max-width: 166px;
+  margin: auto;
+}
+
+#displayField {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#playButton {
+  margin-top: 20px;
+}
+
+#indexIndicator {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  list-style-type: none;
+}
+
+#indexIndicator li {
+  display: block;
   float: left;
-  display: inline-block;
-  width: 50px;
+  margin: 0;
+  width: 1px;
+}
+
+#indexZero {
+  padding-left: 7px;
+}
+
+#indexOne {
+  padding-left: 33px;
+}
+
+#indexTwo {
+  padding-left: 32px;
+}
+
+#indexThree {
+  padding-left: 33px;
+}
+
+#indexFour {
+  padding-left: 34px;
+}
+
+#numberInputs {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#homeLink {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: black;
+}
+
+#homeLink:hover {
+  color: #4CAF50;
 }

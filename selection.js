@@ -16,14 +16,9 @@ var num5 = document.getElementById('num5');
 var description = document.getElementById('description');
 var descriptionTextContent = [];
 
-descriptionTextContent.push('Next, it will compaire the next two numbers in the array at [1] and [2].  If the number at [2] is less, the numbers will swap.  If not, they will remain where they are. ');
-descriptionTextContent.push('Third, it will compaire the numbers at index [2] and [3] and swap them if necessary. ');
-descriptionTextContent.push('Now, it will compaire the numbers at [3] and [4], and swap them if necessary. ');
-descriptionTextContent.push('Now that we have passed through the entire array it will begin again at the beginning. ');
-descriptionTextContent.push('[0] and [1] will compaire and swap if necessary.');
-descriptionTextContent.push('This process will repeat until the array is fully sorted. ');
+descriptionTextContent.push('Next, it will search the rest of the array that is not considered fully sorted and swap the lowest value with the next index that needs to be sorted.');
+descriptionTextContent.push('This will repeat until the array is fully sorted. ');
 
-var loopIndex = 0;
 var descriptionIndex = 0;
 
 
@@ -49,28 +44,47 @@ function displayBoxes(e) {
   }
 }
 
+
 // do the next step in the algo and display next description
+function swap(boxes, firstIndex, secondIndex){
+  var temp = boxes[firstIndex].height;
+  boxes[firstIndex].height = boxes[secondIndex].height;
+  boxes[secondIndex].height = temp;
+}
+
+
+var index = 0;
+var j = 0;
+
 function nextStep() {
 
+  // check to see if inputs are there
   if (num1.value === '' || num2.value === '' || num3.value === '' || num4.value === '' || num5.value === '') {
     alert('Input numbers first.');
   } else {
-    if(boxes[loopIndex].height > boxes[loopIndex + 1].height) {
-      var temp = boxes[loopIndex].height;
-      boxes[loopIndex].height = boxes[loopIndex + 1].height;
-      boxes[loopIndex + 1].height = temp;
+    console.log('true');
+
+    //run algo if inputs are there
+    var min = index;
+
+    for (j = index + 1; j < boxes.length; j++){
+      if (boxes[j].height < boxes[min].height){
+        min = j;
+      }
     }
 
+    if (index !== min){
+        swap(boxes, index, min);
+    }
+
+    index++;
+
     description.textContent = descriptionTextContent[descriptionIndex];
-    if(descriptionIndex < 5) {
+
+    if(descriptionIndex < 1) {
       descriptionIndex++;
     }
 
-    loopIndex++;
-
-    if(loopIndex === boxes.length - 1) {
-      loopIndex = 0;
-    }
   }
 }
 
@@ -81,10 +95,12 @@ function resetNums() {
     boxes[i].height = parseInt(nums[i].value);
   }
 
-  description.textContent = 'First, it will compaire the value of the first two numbers in the array.  If the number at [1] is less than the number at [0], the numbers will swap, moving the lower number to the left.';
+  description.textContent = 'Selection sort searches the entire array for the smallest number.  When it finds the smallest number it will move it to [0] and [0] will be considered fully sorted. ';
 
-  loopIndex = 0;
+  index = 0;
+  j = 0;
   descriptionIndex = 0;
+  console.log('reset');
 }
 
 
@@ -94,4 +110,3 @@ function resetNums() {
 submitButton.addEventListener('click', displayBoxes);
 playButton.addEventListener('click', nextStep);
 resetButton.addEventListener('click', resetNums);
-
