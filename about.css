@@ -128,6 +128,8 @@ vertical-align: bottom;
 
 
 /*-----------------IMAGES-------------*/
+
+
 .groupPhotos{
   margin-top: 50px;
   margin-left: 300px;
@@ -140,58 +142,113 @@ vertical-align: bottom;
   margin-bottom: 25px;
   margin-right: 25px;
   display: inline;
-  border: 1px solid #3D9CA8;
+  border: 3px solid #3D9CA8;
 }
+#zach:hover{
+  border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
 
 #ivette{
   height:405px;
   width:400px;
   margin-bottom: 25px;
-  border: 1px solid #3D9CA8;
+  border: 3px solid #3D9CA8;
+}
+#ivette:hover{
+  border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
 }
 
 #john{
   height:405px;
   width:400px;
   margin-right: 25px;
-  border: 1px solid #3D9CA8;
+  border: 3px solid #3D9CA8;
 }
+#john:hover{
+  border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
 
 #daniel{
   height:405px;
   width:400px;
-  border: 1px solid #3D9CA8;
+  border: 3px solid #3D9CA8;
+}
+#daniel:hover{
+  border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+
+
+#zachSocial{
+  position: absolute;
+  float: left;
+  position: relative;
+  bottom: 495px;
+  left: 310px;
+  opacity:0.5;
+}
+#zachSocial:hover{
+        opacity:1;
 }
 
 
 #ivetteSocial{
   float: right;
   position: relative;
-  bottom: 490px;
+  bottom: 495px;
   right: 500px;
-
+  opacity:0.5;
 }
-
-#zachSocial{
-  float: left;
-  position: relative;
-  bottom: 490px;
-  left: 310px;
-
+#ivetteSocial:hover{
+        opacity:1;
 }
 
 #johnSocial{
   float: left;
   position: relative;
-  bottom: 50px;
+  bottom: 55px;
   left: 130px;
+  opacity:0.5;
+}
+#johnSocial:hover{
+        opacity:1;
 }
 
 #danielSocial{
   float: right;
   position: relative;
-  bottom: 50px;
-  right: 350px;
+  bottom: 55px;
+  right: 325px;
+  opacity:0.5;
+}
+#danielSocial:hover{
+        opacity:1;
 }
 /*#groupPhoto{
   display: inline-block;
