@@ -1,5 +1,6 @@
 'use strict';
 
+
 var submitButton = document.getElementById('submitButton');
 var playButton = document.getElementById('playButton');
 
@@ -22,8 +23,15 @@ descriptionTextContent.push('Now that we have passed through the entire array it
 descriptionTextContent.push('[0] and [1] will compaire and swap if necessary.');
 descriptionTextContent.push('This process will repeat until the array is fully sorted. ');
 
-// event handler
-function sortNums(e) {
+var loopIndex = 0;
+var descriptionIndex = 0;
+
+
+
+// event handlers
+
+// display boxes when submit is clicked
+function displayBoxes(e) {
 
   e.preventDefault();
 
@@ -39,38 +47,50 @@ function sortNums(e) {
       boxes[i].height = parseInt(nums[i].value);
     }
   }
-
-
 }
 
-var loopIndex = 0;
-var descriptionIndex = 0;
-
+// do the next step in the algo and display next description
 function nextStep() {
 
   if (num1.value === '' || num2.value === '' || num3.value === '' || num4.value === '' || num5.value === '') {
     alert('Input numbers first.');
   } else {
-      if(boxes[loopIndex].height > boxes[loopIndex + 1].height) {
-        var temp = boxes[loopIndex].height;
-        boxes[loopIndex].height = boxes[loopIndex + 1].height;
-        boxes[loopIndex + 1].height = temp;
-      }
+    if(boxes[loopIndex].height > boxes[loopIndex + 1].height) {
+      var temp = boxes[loopIndex].height;
+      boxes[loopIndex].height = boxes[loopIndex + 1].height;
+      boxes[loopIndex + 1].height = temp;
+    }
 
-      description.textContent = descriptionTextContent[descriptionIndex];
-      if(descriptionIndex < 5) {
-        descriptionIndex++;
-      }
+    description.textContent = descriptionTextContent[descriptionIndex];
+    if(descriptionIndex < 5) {
+      descriptionIndex++;
+    }
 
-      loopIndex++;
+    loopIndex++;
 
-      if(loopIndex === boxes.length - 1) {
-        loopIndex = 0;
-      }
+    if(loopIndex === boxes.length - 1) {
+      loopIndex = 0;
+    }
   }
 }
 
+// resent the program when reset button is clicked
+function resetNums() {
+  // set initial heights of boxes
+  for(var i = 0; i < nums.length; i++) {
+    boxes[i].height = parseInt(nums[i].value);
+  }
 
-// event listener
-submitButton.addEventListener('click', sortNums);
+  description.textContent = 'First, it will compaire the value of the first two numbers in the array.  If the number at [1] is less than the number at [0], the numbers will swap, moving the lower number to the left.';
+
+  loopIndex = 0;
+  descriptionIndex = 0;
+}
+
+
+
+
+// event listeners
+submitButton.addEventListener('click', displayBoxes);
 playButton.addEventListener('click', nextStep);
+resetButton.addEventListener('click', resetNums);

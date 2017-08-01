@@ -117,3 +117,16 @@ input {
   padding: 0px;
   margin: 0px;
 }
+
+#homeLink {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: black;
+}
+
+#homeLink:hover {
+  color: #4CAF50;
+}
