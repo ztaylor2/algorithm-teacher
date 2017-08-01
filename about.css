@@ -1,29 +1,111 @@
-*{
+body {
   background-color: #EFD8A1;
+  font-family: Helvetica, sans-serif;
+  /*outline: 1px dashed orange;*/
 }
 
 header {
-  color: #AF7575;
-  font-size: 30px;
+  background-color: #AFD7DB;
+  padding: 15px;
+  font-size: 25px;
   display: block;
-  margin: 0px auto;
-  margin: auto;
-  border: 2px solid black;
-  height: 120px;
-  width: 1100px;
-  position: static;
-  text-align: center;
-  vertical-align: text-top;
+  margin-bottom: 100px;
 }
 
-button.link {
+.flat .box {
+  border-radius: 6px;
+}
+
+.flat {
+  background: #3D9CA8;
+  border: 1px dashed #cecfd5;
+  float: left;
+  margin: 20px 20px;
+  display: inline-block;
+}
+figure {
+  background-color: #AFD7DB;
+}
+
+figure .box1 {
+    background-color: #AFD7DB;
+}
+
+
+
+.box1 {
+  background: #BCD693;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  width: 95px;
+}
+
+.rotating {
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.rotating:hover {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.box1 {
+  transform: rotate(-55deg);
+}
+
+header h1{
+  color: #AF7575;
+  font-weight: bold;
+  font-size: 40px;
+  top: 100px;
+}
+
+nav ul li {
+  color: green;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+section div {
+  font-size: 40px;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+div {
+  margin: 20px 10px
+  border: green bold;
+}
+
+/*-------------------NAVIGATION---------------*/
+
+/*button.link {
     font-size: 20px;
     color: #AF7575;
     background:none;
     border:none;
-  }
+  }*/
 
-nav {
+
+/*nav {
    border: 2px solid black;
    height: 30px;
    width: 1100px;
@@ -42,7 +124,7 @@ display: inline;
 margin: 0;
 padding: 0;
 vertical-align: bottom;
-}
+}*/
 
 
 /*-----------------IMAGES-------------*/
@@ -85,30 +167,32 @@ vertical-align: bottom;
 #ivetteSocial{
   float: right;
   position: relative;
-  bottom: 810px;
-  right: 220px;
+  bottom: 490px;
+  right: 500px;
 
 }
 
 #zachSocial{
   float: left;
   position: relative;
-  bottom: 810px;
-  left: 220px;
+  bottom: 490px;
+  left: 310px;
+
 }
 
 #johnSocial{
   float: left;
   position: relative;
-  bottom: 375px;
-  left: 175px;
+  bottom: 50px;
+  left: 130px;
 }
 
 #danielSocial{
   float: right;
   position: relative;
-  bottom: 375px;
-  right: 175px;
+  bottom: 50px;
+  right: 350px;
+}
 /*#groupPhoto{
   display: inline-block;
 }*/
