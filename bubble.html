@@ -7,15 +7,17 @@
   </head>
   <body>
     <h1>Bubble Sort</h1>
+    <p align="center">Bubble sort is a sorting algorithm that will sort an array of numbers. </p>
 
     <!-- form to input numbers -->
     <form>
+      <p>Input five numbers here:</p>
       <section id="numberInputs">
-        <input  id="num1" type="number"/>
-        <input  id="num2" type="number"/>
-        <input  id="num3" type="number"/>
-        <input  id="num4" type="number"/>
-        <input  id="num5" type="number"/>
+        <input  id="num1" name="usrname" type="number" min="0" max="200" required>
+        <input  id="num2" type="number" min="0" max="200" required>
+        <input  id="num3" type="number" min="0" max="200" required>
+        <input  id="num4" type="number" min="0" max="200" required>
+        <input  id="num5" type="number" min="0" max="200" required>
       </section>
 
       <br />
@@ -36,6 +38,7 @@
       </section>
 
       <button type="submit" id="playButton" class="submitButton"><span>Next Step</span></button>
+      <p id="description">First, it will compaire the value of the first two numbers in the array.  If the number at [1] is greater than the number at [0], the numbers will swap, moving the lower number to the left.</p>
 
     </section>
 
