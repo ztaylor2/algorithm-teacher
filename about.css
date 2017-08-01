@@ -21,32 +21,13 @@ button.link {
     color: #AF7575;
     background:none;
     border:none;
-}
+  }
 
 nav {
    border: 2px solid black;
    height: 30px;
    width: 1100px;
    margin: auto;
-
-}
-
-.setOne {
-  display: inline;
-  margin: auto;
-  width: 80%;
-  padding-left: 280px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-
-
-.setTwo {
-  display: inline;
-  margin: auto;
-  width: 80%;
-  padding-left: 280px;
-  margin-bottom: 50px;
 }
 
 nav ul {
@@ -63,9 +44,52 @@ padding: 0;
 vertical-align: bottom;
 }
 
-footer {
-  border: 2px solid black;
-  height: 120px;
-  display: relative;
-  color: #AF7575;
+
+/*-----------------IMAGES-------------*/
+/*#groupPhoto{
+  display: inline-block;
+}*/
+
+#setOne{
+  display: inline;
 }
+
+/*#groupPhoto{
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 275px;
+
+}
+#setOne{
+  padding-bottom: 50px;
+
+}
+
+#zach{
+  width: 400px;
+  height: 405px;
+  padding-right: 50px;
+
+}
+#ivette{
+  width: 400px;
+  height: 405px;
+
+}
+
+#setTwo{
+  padding-bottom: 50px;
+}
+#john{
+  width: 400px;
+  height: 405px;
+  padding-right: 50px;
+
+}
+
+#daniel{
+  width: 400px;
+  height: 405px;
+
+}*/
