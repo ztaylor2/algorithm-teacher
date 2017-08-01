@@ -1,35 +1,41 @@
 'use strict';
 
 var submitButton = document.getElementById('submitButton');
+var playButton = document.getElementById('playButton');
 
-var box1 = document.getElementById('box1');
-var box2 = document.getElementById('box2');
-var box3 = document.getElementById('box3');
-var box4 = document.getElementById('box4');
-var box5 = document.getElementById('box5');
 
-// var box1height = box1.getAttribute('height');
-
+var boxes = document.getElementById('boxesContainer').children;
+var nums = document.getElementById('numberInputs').children;
 
 
 // event handler
 function sortNums(e) {
   e.preventDefault();
 
-  var num1 = parseInt(document.getElementById('num1').value);
-  var num2 = parseInt(document.getElementById('num2').value);
-  var num3 = parseInt(document.getElementById('num3').value);
-  var num4 = parseInt(document.getElementById('num4').value);
-  var num5 = parseInt(document.getElementById('num5').value);
-
-  box1.setAttribute('height', num1);
-  box2.setAttribute('height', num2);
-  box3.setAttribute('height', num3);
-  box4.setAttribute('height', num4);
-  box5.setAttribute('height', num5);
+  // set initial heights of boxes
+  for(var i = 0; i < nums.length; i++) {
+    boxes[i].height = parseInt(nums[i].value);
+  }
 }
 
+var loopIndex = 0;
+
+function nextStep(e) {
+  if (boxes[loopIndex].height > boxes[loopIndex + 1].height) {
+    var temp = boxes[loopIndex].height;
+    boxes[loopIndex].height = boxes[loopIndex + 1].height;
+    boxes[loopIndex + 1].height = temp;
+    console.log(loopIndex, 'still in loop');
+  }
+  loopIndex++;
+
+  if (loopIndex === boxes.length - 1) {
+    loopIndex = 0;
+    console.log(loopIndex, 'set to zero');
+  }
+}
 
 
 // event listener
 submitButton.addEventListener('click', sortNums);
+playButton.addEventListener('click', nextStep);
