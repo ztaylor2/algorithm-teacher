@@ -46,13 +46,73 @@ vertical-align: bottom;
 
 
 /*-----------------IMAGES-------------*/
+.groupPhotos{
+  margin-top: 50px;
+  margin-left: 300px;
+}
+
+#zach{
+  height:405px;
+  width:400px;
+  border-top: 10px solid black;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  display: inline;
+  border: 1px solid #3D9CA8;
+}
+
+#ivette{
+  height:405px;
+  width:400px;
+  margin-bottom: 25px;
+  border: 1px solid #3D9CA8;
+}
+
+#john{
+  height:405px;
+  width:400px;
+  margin-right: 25px;
+  border: 1px solid #3D9CA8;
+}
+
+#daniel{
+  height:405px;
+  width:400px;
+  border: 1px solid #3D9CA8;
+}
+
+
+#ivetteSocial{
+  float: right;
+  position: relative;
+  bottom: 810px;
+  right: 220px;
+
+}
+
+#zachSocial{
+  float: left;
+  position: relative;
+  bottom: 810px;
+  left: 220px;
+}
+
+#johnSocial{
+  float: left;
+  position: relative;
+  bottom: 375px;
+  left: 175px;
+}
+
+#danielSocial{
+  float: right;
+  position: relative;
+  bottom: 375px;
+  right: 175px;
 /*#groupPhoto{
   display: inline-block;
 }*/
 
-#setOne{
-  display: inline;
-}
 
 /*#groupPhoto{
   display: block;
