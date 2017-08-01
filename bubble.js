@@ -9,7 +9,7 @@ var nums = document.getElementById('numberInputs').children;
 
 
 // event handler
-function sortNums(e) {
+function userInput(e) {
   e.preventDefault();
 
   // set initial heights of boxes
@@ -35,6 +35,43 @@ function nextStep(e) {
   }
 }
 
+  do{
+    swapped = false;
+    for(var i = 0; i < inputs.length; i++){
+      if(allNumbers[i] > allNumbers[i + 1]){
+        var temp = allNumbers[i];
+        allNumbers[i] = allNumbers[i + 1];
+        allNumbers[i + 1] = temp;
+        console.log(allNumbers);
+        swapped = true;
+      }
+    }
+  }while(swapped);
+
+  createBars();
+}
+
+var stepThru = 0;
+
+function step(e) {
+  e.preventDefault();
+  console.log(stepThru);
+  clearBars();
+  if(allNumbers[stepThru] > allNumbers[stepThru + 1]){
+    var temp = allNumbers[stepThru];
+    allNumbers[stepThru] = allNumbers[stepThru + 1];
+    allNumbers[stepThru + 1] = temp;
+    console.log(allNumbers);
+  }
+
+  stepThru = stepThru + 1;
+
+  if(stepThru === 4){
+    stepThru = 0;
+  }
+
+  createBars();
+}
 
 // event listener
 submitButton.addEventListener('click', sortNums);
