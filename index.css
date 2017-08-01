@@ -1,17 +1,85 @@
-/** {
+body {
+  background-color: #EFD8A1;
   font-family: Helvetica, sans-serif;
-  outline: 1px dashed orange;
-} */*/
+  /*outline: 1px dashed orange;*/
+}
 
-nav {
-  color: green;
-  padding-bottom: 50px;
+header {
+  background-color: #AFD7DB;
+  padding: 15px;
+  font-size: 25px;
+  display: block;
+}
+
+.flat .box {
+  border-radius: 6px;
+}
+
+.flat {
+  background: #3D9CA8;
+  border: 1px dashed #cecfd5;
   float: left;
+  margin: 20px 20px;
+  display: inline-block;
+}
+figure {
+  /*background-color: #AFD7DB;*/
+}
+
+/*figure .box1 {
+    background-color: #AFD7DB;
+}*/
+
+
+
+.box1 {
+  background: #BCD693;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  width: 95px;
+}
+
+.rotating {
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.rotating:hover {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.box1 {
+  transform: rotate(-55deg);
+}
+
+nav ul li {
+  color: green;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 nav ul {
-    list-style-type: none;
-    display: inline;
+  list-style-type: none;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+section div {
+  font-size: 40px;
+  font-style: italic;
+  font-family: sans-serif;
 }
 
 div {
@@ -19,29 +87,92 @@ div {
   border: green bold;
 }
 
-div s1 {
-  margin: 20px 10px 10px 40px;
-}
-/*section {
-  outline: 1px dashed green;
-}*/
-
 .algorithm {
-  color: blue;
-  font-weight: bold;
-  border: 2px powder blue;
+  font-size: 24px;
+  color:#3D9CA8;
 }
 
-/*section.s2 {
-  outline: 1px dashed black;
-}*/
-
-.ui {
-  font: forestgreen;
+h1 {
+  color: #AF7575;
   font-weight: bold;
+  font-size: 35px;
 }
 
 footer {
-  margin: 5px 20px;
   outline: dashed forestgreen;
+  display: inline;
+  height: 10%;
+  width: 100%
+  position: relative;
+  /*background-color: #AFD7DB;*/
+  /*overflow: hidden;*/
+}
+
+footer div {
+  /*background-color: #AFD7DB;*/
+}
+
+.repositories {
+  font-size: 20px;
+  color: #AF7575;
+  position: relative;
+  /*background-color: #AFD7DB;*/
+  display: inherit;
+}
+
+footer div {
+  /*background-color: #AFD7DB;*/
+}
+.left {
+  text-align: left;
+  display: inline-block;
+  /*background-color: #AFD7DB;*/
+  margin-right: 20px;
+  margin-left: 20px;
+  float: left;
+  width: 20%;
+}
+
+.leftcenter {
+  text-align: left;
+  /*background-color: #AFD7DB;*/
+  float: left;
+  width: 20%;
+  margin-right: 20px;
+  margin-left: 20px;
+
+
+  /*padding: 5px;*/
+  display: inline-block;
+}
+
+.rightcenter {
+  text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  /*background-color: #AFD7DB;*/
+  float: left;
+  width: 20%;
+  /*padding: 5px;*/
+  /*display: inline;*/
+}
+
+.right {
+  text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  /*background-color: #AFD7DB;*/
+  /*float: left;*/
+  float: left;
+  width: 20%;
+  /*padding: 5px;*/
+  /*display: inline;*/
+}
+
+footer div a {
+  font-size: 10px;
+  display: inline;
+  /*background-color: #AFD7DB;*/
 }
