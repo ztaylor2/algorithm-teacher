@@ -9,58 +9,69 @@
 
   <header>
 
-      <div class="flat">
-        <div class="rotating">
-          <figure class="box box1"> Hello</figure>
-        </div>
-      </div>
+    <nav>
+      <ul>
+        <li>
+          <div class="rotating">
+            <figure class="box1"> <a href="index.html">Home</a></figure>
+          </div>
+        </li>
+        <li class="dropdown">
+          <h2 id="dropdownAlgorithms">Algorithms</h2>
+          <div class="dropdown-content">
+            <h3 class="algoHeading">Sorting</h3>
+              <a href="bubble.html">Bubble Sort</a>
+              <br />
+              <a href="insertion.html">Insertion Sort</a>
+              <br />
+              <a href="selection.html">Selection Sort</a>
+              <br />
+              <a href="bubble.html">Quick Sort</a>
+            <h3 class="algoHeading">Searching</h3>
+              <a href="linear-search/linear-search.html">Linear Search</a>
+              <br />
+              <a href="binary-search/binary-search.html">Binary Search</a>
+            <h3 class="algoHeading">Shuffling</h3>
+              <a href="shuffle/shuffle.html">Fisher Yates</a>
+          </div>
+        </li>
+        <li>
+          <a href="about.html" id="aboutLink">About us</a>
+        </li>
+      </ul>
+    </nav>
 
-      <!-- <div class="flat">
-        <div class="rotating">
-          <figure class="box box2"></figure>
-        </div>
-      </div> -->
   </header>
 
-  <nav>
-    <ul>
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="bubble.html">Algorithm</a>
-      </li>
-      <li>
-        <a href="about.html">About us</a>
-      </li>
-    </ul>
-  </nav>
+<!-- Body of document and organized list or algorithm -->
 
   <section>
     <h1>Types of Algorithms</h1>
 
+    <div class="algorithm">Sorting Algorithms</div>
+    <ul>
+      <li>
+        <a href="bubble.html">Bubble Sort</a>
+      </li>
+      <p>Bubble sort is a sorting algorithm that will sort an array of numbers.</p>
+      <li>
+        <a href="selection.html">Selection Sort</a>
+      </li>
+      <p>This algorithm sorts the array of numbers by considering which number in the array is the smallest value.</p>
+      <li>
+        <a href="selection.html">Quick Sort</a>
+      </ul>
+
     <div class="algorithm">Searching Algorithms</div>
       <ul>
         <li>
-          <a href="linear-search.html">Linear-Search</a>
+          <a href="linear-search/linear-search.html">Linear-Search</a>
         </li>
           <p>This algorithm sequentially checks each element of a list of values for the target value until a match is found or until all the elements have been searched</p>
       <li>
-        <a href="binary-search.html"> Binary-Search</a>
+        <a href="binary-search/binary-search.html"> Binary-Search</a>
       </li>
         <p>This algorithm sorts an array by dividing the search interval in half. </p>
-
-    <div class="algorithm">Sorting Algorithms</div>
-      <ul>
-        <li>
-          <a href="bubble.html">Bubble Sort</a>
-        </li>
-          <p>Bubble sort is a sorting algorithm that will sort an array of numbers.</p>
-        <li>
-          <a href="selection.html">Selection Sort</a>
-        </li>
-          <p>This algorithm sorts the array of numbers by considering which number in the array is the smallest value.</p>
-      </ul>
 
     <div class="algorithm">Shuffling Algorithms</div>
       <li>
@@ -80,12 +91,6 @@
       <input type="button" id="homeButton" value="Ready to learn" onclick="homeButton_Click()"/>
 
     <br/>
-
-    <!-- <h4> </h4>
-      Password:
-      <input class="input" id="personName_input" type="text" placeholder="name" />
-    <br /> -->
-
 
 <br>
 <footer>

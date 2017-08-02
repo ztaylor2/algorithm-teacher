@@ -2,39 +2,25 @@
 body {
   background-color: #EFD8A1;
   font-family: Helvetica, sans-serif;
-  /*outline: 1px dashed orange;*/
+  margin: 0;
+  padding: 0;
 }
-
+/*nav bar start*/
 header {
-  background-color: #AFD7DB;
-  padding: 15px;
-  font-size: 25px;
+  background-color: #3D9CA8;
   display: block;
-  margin-bottom: 100px;
-}
-
-.flat .box {
-  border-radius: 6px;
-}
-
-.flat {
-  background: #3D9CA8;
-  border: 1px dashed #cecfd5;
-  float: left;
-  margin: 20px 20px;
-  display: inline-block;
-}
-
-figure {
-  background-color: #AFD7DB;
 }
 
 .box1 {
+  border-radius: 6px;
   background: #BCD693;
-  height: 95px;
-  line-height: 95px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
-  width: 95px;
+  width: 60px;
+  margin: 15px;;
+  padding: 0;
+  transform: rotate(-55deg);
 }
 
 .rotating {
@@ -55,8 +41,39 @@ figure {
   }
 }
 
-.box1 {
-  transform: rotate(-55deg);
+/*dropdown stuff*/
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  padding-top: 0px;
+  z-index: 1;
+}
+
+.dropdown:hover {
+  cursor: pointer;
+}
+
+#dropdownAlgorithms {
+  padding: 23px;
+}
+
+#aboutLink {
+  padding: 23px;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding-left: 20px;
+  color: #3D9CA8;
 }
 
 header h1{
@@ -67,20 +84,31 @@ header h1{
 }
 
 nav ul li {
-  color: green;
+  color: #3D9CA8;
   display: inline-block;
-  margin-right: 20px;
-  text-align: inherit;
+  margin-right: 50px;
+  margin-left: 0px;
+  /*padding: 20px;*/
+}
+
+nav ul li a, #dropdownAlgorithms {
+  font-weight: lighter;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
 }
 
 nav ul {
+  margin: 0;
   list-style-type: none;
 }
 
-nav {
-  /*margin-top: 50px;*/
-  margin-bottom: 50px;
+.algoHeading {
+  font-size: 18px;
+  color: #BCD693;
 }
+
+/*nav bar ends*/
 
 section div {
   text-align: left;
@@ -96,6 +124,7 @@ div {
 
 ul {
 text-align: left;
+padding-left: 25px;
 }
 
 .algorithm {
@@ -107,6 +136,7 @@ text-align: left;
 li {
   list-style-type: none;
   color: #D68FBA;
+  padding-left: 20px;
 }
 
 h1 {
