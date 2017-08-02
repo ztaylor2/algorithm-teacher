@@ -137,7 +137,7 @@ function step13() {
   document.getElementById('step').innerHTML = 'Start Over';
 }
 
-
+//event listeners
 showArray();
 
 step.addEventListener('click', step1);
