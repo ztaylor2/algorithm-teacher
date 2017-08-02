@@ -95,6 +95,7 @@ div {
   border: green bold;
 }
 
+
 /*-------------------NAVIGATION---------------*/
 
 /*button.link {
@@ -142,6 +143,7 @@ vertical-align: bottom;
   margin-bottom: 25px;
   margin-right: 25px;
   display: inline;
+  border-radius: 10px;
   border: 3px solid #3D9CA8;
 }
 #zach:hover{
@@ -160,6 +162,7 @@ vertical-align: bottom;
   width:400px;
   margin-bottom: 25px;
   border: 3px solid #3D9CA8;
+  border-radius: 10px;
 }
 #ivette:hover{
   border: 5px solid #3D9CA8;
@@ -176,6 +179,7 @@ vertical-align: bottom;
   width:400px;
   margin-right: 25px;
   border: 3px solid #3D9CA8;
+  border-radius: 10px;
 }
 #john:hover{
   border: 5px solid #3D9CA8;
@@ -192,6 +196,7 @@ vertical-align: bottom;
   height:405px;
   width:400px;
   border: 3px solid #3D9CA8;
+  border-radius: 10px;
 }
 #daniel:hover{
   border: 5px solid #3D9CA8;
