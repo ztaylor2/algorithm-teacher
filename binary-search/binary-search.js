@@ -70,6 +70,7 @@ function resetNums() {
   }
   boxes[1].style.backgroundColor = '#AFD7DB';
 
+  description.textContent = 'Let\'s say that we are searching for the number 2 in this sorted array of numbers.';
 }
 
 
