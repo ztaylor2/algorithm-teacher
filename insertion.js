@@ -16,10 +16,13 @@ var num5 = document.getElementById('num5');
 var description = document.getElementById('description');
 var descriptionTextContent = [];
 
-descriptionTextContent.push('A number is inserted ');
-descriptionTextContent.push('Another number is inserted ');
+descriptionTextContent.push('[1] (the number adjacent to [0]) is compared to [0], if it is less than [0] it will be inserted to the left of it. ');
+descriptionTextContent.push('Now [0] and [1] are sorted.  The number to the right of [1] is now compared to [1].  If [2] is less than [1] it will move to the left of it then compare itself to the number at [0]. It will then insert itself to the left of [0] if it is less than it or to the right if it is greater.');
+descriptionTextContent.push('This pattern of comparisons and insertions will repeat itself untill the array is sorted.');
 
 var descriptionIndex = 0;
+var index = 0;
+var j = 0;
 
 
 
@@ -47,47 +50,6 @@ function displayBoxes(e) {
 
 
 
-//
-// function insertionSort(items) {
-//
-//     var len     = items.length,     // number of items in the array
-//         value,                      // the value currently being compared
-//         i,                          // index into unsorted section
-//         j;                          // index into sorted section
-//
-//     for (i=0; i < len; i++) {
-//
-//         // store the current value because it may shift later
-//         value = items[i];
-//
-//         /*
-//          * Whenever the value in the sorted section is greater than the value
-//          * in the unsorted section, shift all items in the sorted section over
-//          * by one. This creates space in which to insert the value.
-//          */
-//         for (j=i-1; j > -1 &#038;&#038; items[j] > value; j--) {
-//             items[j+1] = items[j];
-//         }
-//
-//         items[j+1] = value;
-//     }
-//
-//     return items;
-// }
-
-
-
-
-
-
-
-var value = 0;                      // the value currently being compared
-var index = 0;                          // index into unsorted section
-var j = 0;                          // index into sorted section
-
-
-
-
 // do the next step in the algo and display next description
 
 function nextStep() {
@@ -96,7 +58,6 @@ function nextStep() {
   if (num1.value === '' || num2.value === '' || num3.value === '' || num4.value === '' || num5.value === '') {
     alert('Input numbers first.');
   } else {
-
 
     var temp = boxes[index].height;
     j = index - 1;
@@ -108,12 +69,11 @@ function nextStep() {
 
     boxes[j + 1].height = temp;
 
-
     index++;
 
     description.textContent = descriptionTextContent[descriptionIndex];
 
-    if(descriptionIndex < 1) {
+    if(descriptionIndex < 2) {
       descriptionIndex++;
     }
 
