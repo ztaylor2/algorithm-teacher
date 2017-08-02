@@ -1,4 +1,5 @@
 'use strict';
+
 function processButton(e) {
   var buttonEl = document.createElement('button');
   buttonEl.textContent = submit;
@@ -39,3 +40,4 @@ function handleClick(e){
 //   }
 //   console.log ('Answer to my favorite hobby is YES. I enjoy hiking.');
 // }
+
