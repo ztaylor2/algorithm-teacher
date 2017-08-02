@@ -29,24 +29,6 @@ figure {
   background-color: #AFD7DB;
 }
 
-/*figure .box1 {
-=======
-/* figure {
-  background-color: #AFD7DB;
-} */
-/*
-figure .box1 {
->>>>>>> 95251c135f86ffba2d0d52a34790d56dd0edfbf6
-=======
-/* figure {
-  background-color: #AFD7DB;
-} */
-/*
-figure .box1 {
->>>>>>> master
-    background-color: #AFD7DB;
-} */
-
 .box1 {
   background: #BCD693;
   height: 95px;
@@ -88,6 +70,7 @@ nav ul li {
   color: green;
   display: inline-block;
   margin-right: 20px;
+  text-align: inherit;
 }
 
 nav ul {
@@ -100,7 +83,7 @@ nav {
 }
 
 section div {
-  text-align: justify;
+  text-align: left;
   font-size: 40px;
   font-style: italic;
   font-family: sans-serif;
@@ -109,6 +92,10 @@ section div {
 div {
   margin: 20px 10px
   border: green bold;
+}
+
+ul {
+text-align: left;
 }
 
 .algorithm {
