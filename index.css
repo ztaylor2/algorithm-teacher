@@ -6,6 +6,9 @@ body {
 }
 
 
+
+/*nav bar start*/
+
 header {
   background-color: #3D9CA8;
   display: block;
@@ -20,6 +23,7 @@ header {
   width: 60px;
   margin: 15px;;
   padding: 0;
+  transform: rotate(-55deg);
 }
 
 .rotating {
@@ -40,10 +44,6 @@ header {
   }
 }
 
-.box1 {
-  transform: rotate(-55deg);
-}
-
 /*dropdown stuff*/
 
 .dropdown-content {
@@ -58,7 +58,6 @@ header {
 }
 
 .dropdown:hover {
-  /*background: #f9f9f9;*/
   cursor: pointer;
 }
 
@@ -66,8 +65,9 @@ header {
   padding: 23px;
 }
 
-.dropdown:hover #dropdownAlgorithms {
-  /*color: #3D9CA8;*/
+#aboutLink {
+  padding: 23px;
+  cursor: pointer;
 }
 
 .dropdown:hover .dropdown-content {
@@ -103,6 +103,11 @@ nav ul {
   font-size: 18px;
   color: #BCD693;
 }
+
+/*nav bar ends*/
+
+
+
 
 section div {
   text-align: justify;
