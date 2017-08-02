@@ -25,7 +25,7 @@ header {
 /* figure {
   background-color: #AFD7DB;
 } */
-/* 
+/*
 figure .box1 {
     background-color: #AFD7DB;
 } */
@@ -100,15 +100,16 @@ h1 {
   font-size: 35px;
 }
 
-footer, footer h3, footer div {
-  box-sizing: border-box;
+footer footer h3 {
+  border: 1px solid #AFD7DB;
   background-color: #AFD7DB;
 }
 
+}
 footer {
   /*border: 1px dashed green;*/
   width: 100%;
-  height: 100%;
+  height: 150px;
 }
 
 footer h3 {
