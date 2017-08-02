@@ -1,3 +1,4 @@
+
 body {
   background-color: #EFD8A1;
   font-family: Helvetica, sans-serif;
@@ -23,13 +24,21 @@ header {
   margin: 20px 20px;
   display: inline-block;
 }
+<<<<<<< HEAD
 figure {
   background-color: #AFD7DB;
 }
 
 /*figure .box1 {
+=======
+/* figure {
+  background-color: #AFD7DB;
+} */
+/*
+figure .box1 {
+>>>>>>> 95251c135f86ffba2d0d52a34790d56dd0edfbf6
     background-color: #AFD7DB;
-}*/
+} */
 
 .box1 {
   background: #BCD693;
