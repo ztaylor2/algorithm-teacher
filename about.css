@@ -69,7 +69,7 @@ header h1{
   font-size: 40px;
   top: 100px;
 }
-
+/*-------------------NAVIGATION---------------*/
 nav ul li {
   color: green;
   display: inline-block;
@@ -95,37 +95,6 @@ div {
   border: green bold;
 }
 
-/*-------------------NAVIGATION---------------*/
-
-/*button.link {
-    font-size: 20px;
-    color: #AF7575;
-    background:none;
-    border:none;
-  }*/
-
-
-/*nav {
-   border: 2px solid black;
-   height: 30px;
-   width: 1100px;
-   margin: auto;
-}
-
-nav ul {
-list-style: none;
-display: inline;
-margin: 0;
-padding: 0;
-}
-
-li{
-display: inline;
-margin: 0;
-padding: 0;
-vertical-align: bottom;
-}*/
-
 
 /*-----------------IMAGES-------------*/
 .groupPhotos{
@@ -141,6 +110,7 @@ vertical-align: bottom;
   margin-right: 25px;
   display: inline;
   border: 3px solid #3D9CA8;
+  border-radius: 10px;
 }
 #zach:hover{
   border: 5px solid #3D9CA8;
@@ -150,6 +120,7 @@ vertical-align: bottom;
   3px 3px #53a7ea;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
+    border-radius: 10px;
 }
 
 
@@ -158,6 +129,7 @@ vertical-align: bottom;
   width:400px;
   margin-bottom: 25px;
   border: 3px solid #3D9CA8;
+  border-radius: 10px;
 }
 #ivette:hover{
   border: 5px solid #3D9CA8;
@@ -167,6 +139,7 @@ vertical-align: bottom;
   3px 3px #53a7ea;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
+  border-radius: 10px;
 }
 
 #john{
@@ -174,6 +147,7 @@ vertical-align: bottom;
   width:400px;
   margin-right: 25px;
   border: 3px solid #3D9CA8;
+  border-radius: 10px;
 }
 #john:hover{
   border: 5px solid #3D9CA8;
@@ -183,6 +157,7 @@ vertical-align: bottom;
   3px 3px #53a7ea;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
+  border-radius: 10px;
 }
 
 
@@ -190,6 +165,7 @@ vertical-align: bottom;
   height:405px;
   width:400px;
   border: 3px solid #3D9CA8;
+  border-radius: 10px;
 }
 #daniel:hover{
   border: 5px solid #3D9CA8;
@@ -199,6 +175,7 @@ vertical-align: bottom;
   3px 3px #53a7ea;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
+  border-radius: 10px;
 }
 
 
@@ -210,6 +187,7 @@ vertical-align: bottom;
   bottom: 495px;
   left: 310px;
   opacity:0.5;
+
 }
 #zachSocial:hover{
         opacity:1;
@@ -220,7 +198,7 @@ vertical-align: bottom;
   float: right;
   position: relative;
   bottom: 495px;
-  right: 500px;
+  right: 260px;
   opacity:0.5;
 }
 #ivetteSocial:hover{
@@ -242,7 +220,7 @@ vertical-align: bottom;
   float: right;
   position: relative;
   bottom: 55px;
-  right: 325px;
+  right: 80px;
   opacity:0.5;
 }
 #danielSocial:hover{
