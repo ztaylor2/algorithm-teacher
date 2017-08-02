@@ -1,0 +1,296 @@
+body {
+  background-color: #EFD8A1;
+  font-family: Helvetica, sans-serif;
+  /*outline: 1px dashed orange;*/
+}
+
+header {
+  background-color: #AFD7DB;
+  padding: 15px;
+  font-size: 25px;
+  display: block;
+  margin-bottom: 100px;
+}
+
+.flat .box {
+  border-radius: 6px;
+}
+
+.flat {
+  background: #3D9CA8;
+  border: 1px dashed #cecfd5;
+  float: left;
+  margin: 20px 20px;
+  display: inline-block;
+}
+figure {
+  background-color: #AFD7DB;
+}
+
+figure .box1 {
+    background-color: #AFD7DB;
+}
+
+
+
+.box1 {
+  background: #BCD693;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  width: 95px;
+}
+
+.rotating {
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.rotating:hover {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.box1 {
+  transform: rotate(-55deg);
+}
+
+header h1{
+  color: #AF7575;
+  font-weight: bold;
+  font-size: 40px;
+  top: 100px;
+}
+
+nav ul li {
+  color: green;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+section div {
+  font-size: 40px;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+div {
+  margin: 20px 10px
+  border: green bold;
+}
+
+/*-------------------NAVIGATION---------------*/
+
+/*button.link {
+    font-size: 20px;
+    color: #AF7575;
+    background:none;
+    border:none;
+  }*/
+
+
+/*nav {
+   border: 2px solid black;
+   height: 30px;
+   width: 1100px;
+   margin: auto;
+}
+
+nav ul {
+list-style: none;
+display: inline;
+margin: 0;
+padding: 0;
+}
+
+li{
+display: inline;
+margin: 0;
+padding: 0;
+vertical-align: bottom;
+}*/
+
+
+/*-----------------IMAGES-------------*/
+
+
+.groupPhotos{
+  margin-top: 50px;
+  margin-left: 300px;
+}
+
+#zach{
+  height:405px;
+  width:400px;
+  border-top: 10px solid black;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  display: inline;
+  border: 3px solid #3D9CA8;
+}
+#zach:hover{
+  border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+
+#ivette{
+  height:405px;
+  width:400px;
+  margin-bottom: 25px;
+  border: 3px solid #3D9CA8;
+}
+#ivette:hover{
+  border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+#john{
+  height:405px;
+  width:400px;
+  margin-right: 25px;
+  border: 3px solid #3D9CA8;
+}
+#john:hover{
+  border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+
+#daniel{
+  height:405px;
+  width:400px;
+  border: 3px solid #3D9CA8;
+}
+#daniel:hover{
+  border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+
+
+#zachSocial{
+  position: absolute;
+  float: left;
+  position: relative;
+  bottom: 495px;
+  left: 310px;
+  opacity:0.5;
+}
+#zachSocial:hover{
+        opacity:1;
+}
+
+
+#ivetteSocial{
+  float: right;
+  position: relative;
+  bottom: 495px;
+  right: 500px;
+  opacity:0.5;
+}
+#ivetteSocial:hover{
+        opacity:1;
+}
+
+#johnSocial{
+  float: left;
+  position: relative;
+  bottom: 55px;
+  left: 130px;
+  opacity:0.5;
+}
+#johnSocial:hover{
+        opacity:1;
+}
+
+#danielSocial{
+  float: right;
+  position: relative;
+  bottom: 55px;
+  right: 325px;
+  opacity:0.5;
+}
+#danielSocial:hover{
+        opacity:1;
+}
+/*#groupPhoto{
+  display: inline-block;
+}*/
+
+
+/*#groupPhoto{
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 275px;
+
+}
+#setOne{
+  padding-bottom: 50px;
+
+}
+
+#zach{
+  width: 400px;
+  height: 405px;
+  padding-right: 50px;
+
+}
+#ivette{
+  width: 400px;
+  height: 405px;
+
+}
+
+#setTwo{
+  padding-bottom: 50px;
+}
+#john{
+  width: 400px;
+  height: 405px;
+  padding-right: 50px;
+
+}
+
+#daniel{
+  width: 400px;
+  height: 405px;
+
+}*/
