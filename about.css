@@ -138,8 +138,8 @@ text-align: center;
 #zachSocial{
   float: left;
   position: relative;
-  bottom: 670px;
-  left: 275px;
+  bottom: 555px;
+  left: 115px;
   opacity:0.5;
 
 }
@@ -159,17 +159,17 @@ text-align: center;
 #ivette:hover{
   border: 5px solid #3D9CA8;
 }
-/*#ivetteSocial{
+#ivetteSocial{
   float: right;
   position: relative;
-  bottom: 550px;
-  right: 535px;
+  bottom: 555px;
+  right: 290px;
   opacity:0.5;
 
 }
 #ivetteSocial:hover{
   opacity:1;
-}*/
+}
 
 
 /*=====JOHN=====*/
@@ -184,17 +184,17 @@ text-align: center;
 #john:hover{
   border: 5px solid #3D9CA8;
 }
-/*#johnSocial{
+#johnSocial{
   float: left;
   position: relative;
-  bottom: 105px;
-  left: 150px;
+  bottom: 110px;
+  right: 75px;
   opacity:0.5;
 
 }
 #johnSocial:hover{
   opacity:1;
-}*/
+}
 
 /*=====DANIEL=====*/
 #daniel{
@@ -208,17 +208,17 @@ text-align: center;
 #daniel:hover{
   border: 5px solid #3D9CA8;
 }
-/*
+
 #danielSocial{
   float: right;
   position: relative;
-  bottom: 105px;
-  right: 365px;
+  bottom: 110px;
+  right: 100px;
   opacity:0.5;
 }
 #danielSocial:hover{
   opacity:1;
-}*/
+}
 
 
 
