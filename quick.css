@@ -25,7 +25,7 @@ h1 {
 }
 
 #arrayBoxes {
-  height: 300px;
+  height: 275px;
   width: 600px;
   margin: 0 auto;
   border: 1px solid black;
@@ -81,4 +81,10 @@ h1 {
 .step:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+#stepText {
+  /*outline: dashed orange 1px;*/
+  text-align: center;
+  padding: 10px;
 }
