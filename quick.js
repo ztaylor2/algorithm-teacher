@@ -42,9 +42,8 @@ function displayBoxes(e) {
     for(var i = 0; i < nums.length; i++) {
       boxes[i].height = parseInt(nums[i].value);
       items[i] = parseInt(nums[i].value);
-      console.log(items);
+
     }
-    start();
   }
 }
 
@@ -54,37 +53,40 @@ function displayBoxes(e) {
 
 // do the next step in the algo and display next description
 
-function swap(items, firstIndex, secondIndex){
-  var temp = items[firstIndex];
-  items[firstIndex] = items[secondIndex];
-  items[secondIndex] = temp;
-  console.log('swapping: ', items);
+function swap(boxes, firstIndex, secondIndex){
+  console.log('firstIndex: ', firstIndex);
+  console.log('secondIndex: ', secondIndex);
+  var temp = boxes[firstIndex].height;
+  boxes[firstIndex].height = boxes[secondIndex].height;
+  boxes[secondIndex].height = temp;
+  console.log('swapping: ', boxes);
+
 }
 
-function partition(items, left, right) {
+function partition(boxes, left, right) {
   // check to see if inputs are there
   if (num1.value === '' || num2.value === '' || num3.value === '' || num4.value === '' || num5.value === '') {
     alert('Input numbers first.');
   } else {
     console.log('true');
-
+    console.log('right: ',right);
     //run algo if inputs are there
-    var pivot = items[Math.floor((right + left) / 2)];
+    var pivot = boxes[Math.floor((right + left) / 2)].height;
     console.log('pivot: ', pivot);
     var i = left;
     var j = right;
-
+    console.log('j = right',j);
     while (i <= j) {
-      while (items[i] < pivot) {
-        console.log('i: ', i);
+      while (boxes[i].height < pivot) {
         i++;
+        console.log('i: ', i);
       }
-      while (items[j] > pivot) {
-        console.log('j: ', j);
+      while (boxes[j].height > pivot) {
         j--;
+        console.log('j: ', j);
       }
       if (i <= j) {
-        swap(items, i, j);
+        swap(boxes, i, j);
         i++;
         j--;
         console.log('i after swap: ', i);
@@ -97,34 +99,28 @@ function partition(items, left, right) {
   }
 }
 
-function quickSort(items, left, right) {
+function quickSort(boxes, left, right) {
   var index;
-  if (items.length > 1) {
-    index = partition(items, left, right);
+  if (boxes.length > 1) {
+    index = partition(boxes, left, right);
     console.log('index after partition',index);
     if (left < index - 1) {
       console.log('top');
-      quickSort(items, left, index - 1);
+      quickSort(boxes, left, index - 1);
     }
     if (index < right) {
       console.log('bottom');
-      console.log('left: ', left);
-      console.log('items: ', items);
       console.log('index: ', index);
-      console.log('right: ', right);
-      quickSort(items, index, right);
+      quickSort(boxes, index, right);
     }
   }
-  return items;
+  return boxes;
 }
 
 function start() {
 
-  var result = quickSort(items, 0, items.length - 1);
-
+  quickSort(boxes, 0, boxes.length - 2);
 }
-
-
 
 // reset the program when reset button is clicked
 function resetNums() {
@@ -135,18 +131,14 @@ function resetNums() {
 
   description.textContent = 'Selection sort searches the entire array for the smallest number.  When it finds the smallest number it will move it to [0] and [0] will be considered fully sorted. ';
 
-  index = 0;
-  j = 0;
+  // index = 0;
+  // j = 0;
   descriptionIndex = 0;
   console.log('reset');
 }
-//
-//
 
 // event listeners
 submitButton.addEventListener('click', displayBoxes);
 // playButton.addEventListener('click', nextStep);
 resetButton.addEventListener('click', resetNums);
-
-
-// submitButton.addEventListener('click', start);
+playButton.addEventListener('click', start);
