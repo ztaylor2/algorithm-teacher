@@ -42,8 +42,9 @@ function displayBoxes(e) {
     for(var i = 0; i < nums.length; i++) {
       boxes[i].height = parseInt(nums[i].value);
       items[i] = parseInt(nums[i].value);
-      start();
+      console.log(items);
     }
+    start();
   }
 }
 
@@ -86,9 +87,13 @@ function partition(items, left, right) {
         swap(items, i, j);
         i++;
         j--;
+        console.log('i after swap: ', i);
+        console.log('j after swap: ', j);
       }
     }
+    console.log('i before return: ', i);
     return i;
+
   }
 }
 
@@ -96,6 +101,7 @@ function quickSort(items, left, right) {
   var index;
   if (items.length > 1) {
     index = partition(items, left, right);
+    console.log('index after partition',index);
     if (left < index - 1) {
       console.log('top');
       quickSort(items, left, index - 1);
