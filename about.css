@@ -3,43 +3,32 @@ body {
   font-family: Helvetica, sans-serif;
   height: 100%;
   /*outline: 1px dashed orange;*/
+  margin: 0;
+  padding: 0;
 }
+
+
+
+
+
+
+/*nav bar start*/
 
 header {
-  background-color: #AFD7DB;
-  padding: 15px;
-  font-size: 25px;
+  background-color: #3D9CA8;
   display: block;
-  margin-bottom: 100px;
 }
-
-.flat .box {
-  border-radius: 6px;
-}
-
-.flat {
-  background: #3D9CA8;
-  border: 1px dashed #cecfd5;
-  float: left;
-  margin: 20px 20px;
-  display: inline-block;
-}
-figure {
-  background-color: #AFD7DB;
-}
-
-figure .box1 {
-    background-color: #AFD7DB;
-}
-
-
 
 .box1 {
+  border-radius: 6px;
   background: #BCD693;
-  height: 95px;
-  line-height: 95px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
-  width: 95px;
+  width: 60px;
+  margin: 15px;;
+  padding: 0;
+  transform: rotate(-55deg);
 }
 
 .rotating {
@@ -48,7 +37,7 @@ figure .box1 {
 }
 
 .rotating:hover {
-    animation: spin 5s linear infinite;
+    animation: rotating 5s linear infinite;
 }
 
 @keyframes rotating {
@@ -60,57 +49,87 @@ figure .box1 {
   }
 }
 
-.box1 {
-  transform: rotate(-55deg);
-}
-
-
 /*-------------------NAVIGATION---------------*/
+/*dropdown stuff*/
 
-nav ul li {
-  color: #AF7575;
-  display: inline-block;
-  margin-right: 20px;
-
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  padding-top: 0px;
+  z-index: 1;
 }
 
-nav ul {
-  list-style-type: none;
+.dropdown:hover {
+  cursor: pointer;
 }
 
-nav {
-  margin-bottom: 30px;
+#dropdownAlgorithms {
+  padding: 23px;
 }
 
-section div {
-  font-size: 40px;
-  font-style: italic;
-  font-family: sans-serif;
+#aboutLink {
+  padding: 23px;
+  cursor: pointer;
 }
 
-div {
-  margin: 10px 10px
-  border: green bold;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-
-h1{
-margin-top: 50px;
-margin-bottom: 5px;
-color: #AF7575;
-font-weight: bold;
-font-size: 35px;
-margin-right: 215px;
-text-align: center;
-
-}
-
-h5{
-  text-align: center;
-  margin: 0px;
+.dropdown-content a {
+  padding-left: 20px;
   color: #3D9CA8;
 }
 
+nav ul li {
+  color: #3D9CA8;
+  display: inline-block;
+  margin-right: 50px;
+  margin-left: 0px;
+  /*padding: 20px;*/
+}
+
+nav ul li a, #dropdownAlgorithms {
+  font-weight: lighter;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.algoHeading {
+  font-size: 18px;
+  color: #BCD693;
+}
+
+
+
+/*------------------Header--------------*/
+.header{
+  text-align: center;
+}
+
+#siteHeading{
+  font-size: 40px;
+  font-family: Helvetica, sans-serif;
+  color: #3D9CA8;
+  margin-bottom: 0px;
+}
+
+#subHeading{
+  font-size: 20px;
+  font-style: italic;
+  color: #BCD693;
+  padding-top: 0px;
+}
 /*-----------------IMAGES-------------*/
 .groupPhotos{
 margin-top: 50px;
@@ -138,8 +157,8 @@ text-align: center;
 #zachSocial{
   float: left;
   position: relative;
-  bottom: 555px;
-  left: 115px;
+  bottom: 300px;
+  left: 310px;
   opacity:0.5;
 
 }
