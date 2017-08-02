@@ -7,14 +7,13 @@ h1 {
 .box {
   background-color: black;
   color: white;
+  border-radius: 5px;
+  border: 0;
 }
 
-form {
-  border: 1px solid black;
-  border-radius: 5px;
-  max-width: 486px;
-  margin: auto;
-  padding: 20px;
+#box2 {
+  background-color: #AFD7DB;
+  color: white;
 }
 
 .submitButton {
@@ -60,7 +59,7 @@ input {
 
 #boxesContainer {
   display: block;
-  max-width: 166px;
+  max-width: 170px;
   margin: auto;
 }
 
@@ -92,30 +91,40 @@ input {
   width: 1px;
 }
 
-#indexZero {
-  padding-left: 7px;
-}
-
 #indexOne {
-  padding-left: 33px;
+  padding-left: 0px;
 }
 
 #indexTwo {
-  padding-left: 32px;
+  padding-left: 22px;
 }
 
 #indexThree {
-  padding-left: 33px;
+  padding-left: 18px;
 }
 
 #indexFour {
-  padding-left: 34px;
+  padding-left: 18px;
 }
 
-#numberInputs {
-  border: none;
-  padding: 0px;
-  margin: 0px;
+#indexFive {
+  padding-left: 18px;
+}
+
+#indexSix {
+  padding-left: 18px;
+}
+
+#indexSeven {
+  padding-left: 18px;
+}
+
+#indexEight {
+  padding-left: 18px;
+}
+
+#indexNine {
+  padding-left: 18px;
 }
 
 #homeLink {
