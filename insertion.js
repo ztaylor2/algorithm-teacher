@@ -16,10 +16,13 @@ var num5 = document.getElementById('num5');
 var description = document.getElementById('description');
 var descriptionTextContent = [];
 
-descriptionTextContent.push('Next, it will search the rest of the array that is not considered fully sorted and swap the lowest value with the next index that needs to be sorted.');
-descriptionTextContent.push('This will repeat until the array is fully sorted. ');
+descriptionTextContent.push('[1] (the number adjacent to [0]) is compared to [0], if it is less than [0] it will be inserted to the left of it. ');
+descriptionTextContent.push('Now [0] and [1] are sorted.  The number to the right of [1] is now compared to [1].  If [2] is less than [1] it will move to the left of it then compare itself to the number at [0]. It will then insert itself to the left of [0] if it is less than it or to the right if it is greater.');
+descriptionTextContent.push('This pattern of comparisons and insertions will repeat itself untill the array is sorted.');
 
 var descriptionIndex = 0;
+var index = 0;
+var j = 0;
 
 
 
@@ -45,16 +48,9 @@ function displayBoxes(e) {
 }
 
 
+
+
 // do the next step in the algo and display next description
-function swap(boxes, firstIndex, secondIndex){
-  var temp = boxes[firstIndex].height;
-  boxes[firstIndex].height = boxes[secondIndex].height;
-  boxes[secondIndex].height = temp;
-}
-
-
-var index = 0;
-var j = 0;
 
 function nextStep() {
 
@@ -62,26 +58,22 @@ function nextStep() {
   if (num1.value === '' || num2.value === '' || num3.value === '' || num4.value === '' || num5.value === '') {
     alert('Input numbers first.');
   } else {
-    console.log('true');
 
-    //run algo if inputs are there
-    var min = index;
+    var temp = boxes[index].height;
+    j = index - 1;
 
-    for (j = index + 1; j < boxes.length; j++){
-      if (boxes[j].height < boxes[min].height){
-        min = j;
-      }
+    while (j >= 0 && boxes[j].height > temp) {
+      boxes[j + 1].height = boxes[j].height;
+      j--;
     }
 
-    if (index !== min){
-        swap(boxes, index, min);
-    }
+    boxes[j + 1].height = temp;
 
     index++;
 
     description.textContent = descriptionTextContent[descriptionIndex];
 
-    if(descriptionIndex < 1) {
+    if(descriptionIndex < 2) {
       descriptionIndex++;
     }
 
@@ -95,7 +87,7 @@ function resetNums() {
     boxes[i].height = parseInt(nums[i].value);
   }
 
-  description.textContent = 'Selection sort searches the entire array for the smallest number.  When it finds the smallest number it will move it to [0] and [0] will be considered fully sorted. ';
+  description.textContent = 'Right off the bat [0] is considered fully sorted. ';
 
   index = 0;
   j = 0;

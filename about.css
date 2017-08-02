@@ -63,8 +63,18 @@ figure .box1 {
   transform: rotate(-55deg);
 }
 
+<<<<<<< HEAD
 
 
+=======
+header h1{
+  color: #AF7575;
+  font-weight: bold;
+  font-size: 40px;
+  top: 100px;
+}
+/*-------------------NAVIGATION---------------*/
+>>>>>>> master
 nav ul li {
   color: green;
   display: inline-block;
@@ -91,6 +101,7 @@ div {
   border: green bold;
 }
 
+<<<<<<< HEAD
 
 /*-------------------NAVIGATION---------------*/
 
@@ -123,10 +134,10 @@ padding: 0;
 vertical-align: bottom;
 }*/
 
+=======
+>>>>>>> master
 
 /*-----------------IMAGES-------------*/
-
-
 .groupPhotos{
 margin-top: 50px;
   margin-left: 300px;
@@ -141,6 +152,7 @@ margin-top: 50px;
   display: inline;
   border-radius: 10px;
   border: 3px solid #3D9CA8;
+  border-radius: 10px;
 }
 #zach:hover{
   border: 5px solid #3D9CA8;
@@ -150,6 +162,7 @@ margin-top: 50px;
   3px 3px #53a7ea;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
+    border-radius: 10px;
 }
 
 
@@ -168,6 +181,7 @@ margin-top: 50px;
   3px 3px #53a7ea;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
+  border-radius: 10px;
 }
 
 #john{
@@ -185,6 +199,7 @@ margin-top: 50px;
   3px 3px #53a7ea;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
+  border-radius: 10px;
 }
 
 
@@ -202,6 +217,7 @@ margin-top: 50px;
   3px 3px #53a7ea;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
+  border-radius: 10px;
 }
 
 
@@ -213,6 +229,7 @@ margin-top: 50px;
   bottom: 495px;
   left: 310px;
   opacity:0.5;
+
 }
 #zachSocial:hover{
         opacity:1;
@@ -223,7 +240,7 @@ margin-top: 50px;
   float: right;
   position: relative;
   bottom: 495px;
-  right: 500px;
+  right: 260px;
   opacity:0.5;
 }
 #ivetteSocial:hover{
@@ -245,7 +262,7 @@ margin-top: 50px;
   float: right;
   position: relative;
   bottom: 55px;
-  right: 325px;
+  right: 80px;
   opacity:0.5;
 }
 #danielSocial:hover{
