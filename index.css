@@ -9,6 +9,7 @@ header {
   padding: 15px;
   font-size: 25px;
   display: block;
+  margin-bottom: 100px;
 }
 
 .flat .box {
@@ -23,7 +24,7 @@ header {
   display: inline-block;
 }
 figure {
-  /*background-color: #AFD7DB;*/
+  background-color: #AFD7DB;
 }
 
 /*figure .box1 {
@@ -60,6 +61,13 @@ figure {
   transform: rotate(-55deg);
 }
 
+header h1{
+  color: #AF7575;
+  font-weight: bold;
+  font-size: 40px;
+  top: 100px;
+}
+
 nav ul li {
   color: green;
   display: inline-block;
@@ -71,7 +79,7 @@ nav ul {
 }
 
 nav {
-  margin-top: 50px;
+  /*margin-top: 50px;*/
   margin-bottom: 50px;
 }
 
