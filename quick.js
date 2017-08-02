@@ -1,144 +1,143 @@
 'use strict';
 
-var submitButton = document.getElementById('submitButton');
-var playButton = document.getElementById('playButton');
+var numbers = ['8','1','3','2','7'];
 
-var boxes = document.getElementById('boxesContainer').children;
-var nums = document.getElementById('numberInputs').children;
+var ulEl = document.getElementById('showArray');
 
-var num1 = document.getElementById('num1');
-var num2 = document.getElementById('num2');
-var num3 = document.getElementById('num3');
-var num4 = document.getElementById('num4');
-var num5 = document.getElementById('num5');
-
-var items = [];
-
-var description = document.getElementById('description');
-var descriptionTextContent = [];
-
-descriptionTextContent.push('Next, it will search the rest of the array that is not considered fully sorted and swap the lowest value with the next index that needs to be sorted.');
-descriptionTextContent.push('This will repeat until the array is fully sorted. ');
-
-var descriptionIndex = 0;
-
-
-
-// event handlers
-
-// display boxes when submit is clicked
-function displayBoxes(e) {
-
-  e.preventDefault();
-
-  if (num1.value > 100 || num1.value < 1 ||
-  num2.value > 100 || num2.value < 1 ||
-  num3.value > 100 || num3.value < 1 ||
-  num4.value > 100 || num4.value < 1 ||
-  num5.value > 100 || num5.value < 1) {
-    alert('Please put in a numbers from 1 to 100.');
-  } else {
-    // set initial heights of boxes
-    for(var i = 0; i < nums.length; i++) {
-      boxes[i].height = parseInt(nums[i].value);
-      items[i] = parseInt(nums[i].value);
-
-    }
+function showArray() {
+  // e.preventDefault();
+  for (var i = 0; i < numbers.length; i++){
+    var liEl = document.createElement('li');
+    liEl.setAttribute('id', 'arrayIndex' + i);
+    liEl.innerHTML = numbers[i];
+    ulEl.appendChild(liEl);
   }
 }
 
-
-/*_________________________ Quick Sort Algorithm _____________________________*/
-/*____ Code from https://www.nczonline.net/blog/2012/11/27/computer-science-in-javascript-quicksort/*/
-
-// do the next step in the algo and display next description
-
-function swap(boxes, firstIndex, secondIndex){
-  console.log('firstIndex: ', firstIndex);
-  console.log('secondIndex: ', secondIndex);
-  var temp = boxes[firstIndex].height;
-  boxes[firstIndex].height = boxes[secondIndex].height;
-  boxes[secondIndex].height = temp;
-  console.log('swapping: ', boxes);
-
+function step1() {
+  document.getElementById('arrayIndex0').innerHTML = '8';
+  document.getElementById('arrayIndex1').innerHTML = '1';
+  document.getElementById('arrayIndex2').innerHTML = '3';
+  document.getElementById('arrayIndex3').innerHTML = '2';
+  document.getElementById('arrayIndex4').innerHTML = '7';
+  document.getElementById('arrayIndex0').style.background = 'white';
+  document.getElementById('arrayIndex1').style.background = 'white';
+  document.getElementById('arrayIndex2').style.background = 'white';
+  document.getElementById('arrayIndex3').style.background = 'white';
+  document.getElementById('arrayIndex4').style.background = 'white';
+  document.getElementById('arrayIndex2').style.background = 'yellow';
+  step.removeEventListener('click', step1);
+  step.addEventListener('click', step2);
+  document.getElementById('step').innerHTML = 'Next Step';
 }
 
-function partition(boxes, left, right) {
-  // check to see if inputs are there
-  if (num1.value === '' || num2.value === '' || num3.value === '' || num4.value === '' || num5.value === '') {
-    alert('Input numbers first.');
-  } else {
-    console.log('true');
-    console.log('right: ',right);
-    //run algo if inputs are there
-    var pivot = boxes[Math.floor((right + left) / 2)].height;
-    console.log('pivot: ', pivot);
-    var i = left;
-    var j = right;
-    console.log('j = right',j);
-    while (i <= j) {
-      while (boxes[i].height < pivot) {
-        i++;
-        console.log('i: ', i);
-      }
-      while (boxes[j].height > pivot) {
-        j--;
-        console.log('j: ', j);
-      }
-      if (i <= j) {
-        swap(boxes, i, j);
-        i++;
-        j--;
-        console.log('i after swap: ', i);
-        console.log('j after swap: ', j);
-      }
-    }
-    console.log('i before return: ', i);
-    return i;
-
-  }
+function step2() {
+  document.getElementById('arrayIndex0').style.background = 'lightblue';
+  document.getElementById('arrayIndex4').style.background = 'lightblue';
+  step.removeEventListener('click', step2);
+  step.addEventListener('click', step3);
 }
 
-function quickSort(boxes, left, right) {
-  var index;
-  if (boxes.length > 1) {
-    index = partition(boxes, left, right);
-    console.log('index after partition',index);
-    if (left < index - 1) {
-      console.log('top');
-      quickSort(boxes, left, index - 1);
-    }
-    if (index < right) {
-      console.log('bottom');
-      console.log('index: ', index);
-      quickSort(boxes, index, right);
-    }
-  }
-  return boxes;
+function step3() {
+  document.getElementById('arrayIndex0').style.background = 'orange';
+  document.getElementById('arrayIndex4').style.background = 'lightblue';
+  step.removeEventListener('click', step3);
+  step.addEventListener('click', step4);
 }
 
-function start() {
-
-  quickSort(boxes, 0, boxes.length - 2);
+function step4() {
+  document.getElementById('arrayIndex4').style.background = 'white';
+  document.getElementById('arrayIndex3').style.background = 'lightblue';
+  step.removeEventListener('click', step4);
+  step.addEventListener('click', step5);
 }
 
-// reset the program when reset button is clicked
-function resetNums() {
-  // set initial heights of boxes
-  for(var i = 0; i < nums.length; i++) {
-    boxes[i].height = parseInt(nums[i].value);
-  }
-
-  description.textContent = 'Selection sort searches the entire array for the smallest number.  When it finds the smallest number it will move it to [0] and [0] will be considered fully sorted. ';
-
-  // index = 0;
-  // j = 0;
-  descriptionIndex = 0;
-  console.log('reset');
+function step5() {
+  document.getElementById('arrayIndex3').style.background = 'orange';
+  step.removeEventListener('click', step5);
+  step.addEventListener('click', step6);
 }
 
-// event listeners
-submitButton.addEventListener('click', displayBoxes);
-// playButton.addEventListener('click', nextStep);
-resetButton.addEventListener('click', resetNums);
-playButton.addEventListener('click', start);
+function step6() {
+  document.getElementById('arrayIndex0').innerHTML = '2';
+  document.getElementById('arrayIndex3').innerHTML = '8';
+  document.getElementById('arrayIndex0').style.background = 'lightgreen';
+  document.getElementById('arrayIndex3').style.background = 'lightgreen';
+  step.removeEventListener('click', step6);
+  step.addEventListener('click', step7);
+}
+
+function step7() {
+  document.getElementById('arrayIndex2').style.background = 'lightblue';
+  document.getElementById('arrayIndex0').style.background = 'white';
+  document.getElementById('arrayIndex3').style.background = 'white';
+  step.removeEventListener('click', step7);
+  step.addEventListener('click', step8);
+}
+
+function step8() {
+  document.getElementById('arrayIndex1').style.background = 'yellow';
+  document.getElementById('arrayIndex2').style.background = 'white';
+  document.getElementById('arrayIndex4').style.background = 'grey';
+  document.getElementById('arrayIndex3').style.background = 'grey';
+  step.removeEventListener('click', step8);
+  step.addEventListener('click', step9);
+}
+
+function step9() {
+  document.getElementById('arrayIndex1').style.background = 'yellow';
+  document.getElementById('arrayIndex0').style.background = 'lightblue';
+  document.getElementById('arrayIndex2').style.background = 'lightblue';
+  document.getElementById('arrayIndex4').style.background = 'grey';
+  document.getElementById('arrayIndex3').style.background = 'grey';
+  step.removeEventListener('click', step9);
+  step.addEventListener('click', step10);
+}
+
+function step10() {
+  document.getElementById('arrayIndex1').style.background = 'yellow';
+  document.getElementById('arrayIndex0').style.background = 'orange';
+  document.getElementById('arrayIndex2').style.background = 'lightblue';
+  document.getElementById('arrayIndex4').style.background = 'grey';
+  document.getElementById('arrayIndex3').style.background = 'grey';
+  step.removeEventListener('click', step10);
+  step.addEventListener('click', step11);
+}
+
+function step11() {
+  document.getElementById('arrayIndex1').style.background = 'lightblue';
+  document.getElementById('arrayIndex0').style.background = 'orange';
+  document.getElementById('arrayIndex2').style.background = 'white';
+  document.getElementById('arrayIndex4').style.background = 'grey';
+  document.getElementById('arrayIndex3').style.background = 'grey';
+  step.removeEventListener('click', step11);
+  step.addEventListener('click', step12);
+}
+
+function step12() {
+  document.getElementById('arrayIndex1').style.background = 'orange';
+  document.getElementById('arrayIndex0').style.background = 'orange';
+  document.getElementById('arrayIndex2').style.background = 'white';
+  document.getElementById('arrayIndex4').style.background = 'grey';
+  document.getElementById('arrayIndex3').style.background = 'grey';
+  step.removeEventListener('click', step12);
+  step.addEventListener('click', step13);
+}
+
+function step13() {
+  document.getElementById('arrayIndex1').style.background = 'lightgreen';
+  document.getElementById('arrayIndex0').style.background = 'lightgreen';
+  document.getElementById('arrayIndex1').innerHTML = '2';
+  document.getElementById('arrayIndex0').innerHTML = '1';
+  document.getElementById('arrayIndex2').style.background = 'white';
+  document.getElementById('arrayIndex4').style.background = 'grey';
+  document.getElementById('arrayIndex3').style.background = 'grey';
+  step.removeEventListener('click', step13);
+  step.addEventListener('click', step1);
+  document.getElementById('step').innerHTML = 'Start Over';
+}
+
+
+showArray();
+
+step.addEventListener('click', step1);
