@@ -63,17 +63,13 @@ figure .box1 {
   transform: rotate(-55deg);
 }
 
-header h1{
-  color: #AF7575;
-  font-weight: bold;
-  font-size: 40px;
-  top: 100px;
-}
+
 
 nav ul li {
   color: green;
   display: inline-block;
   margin-right: 20px;
+
 }
 
 nav ul {
@@ -81,7 +77,7 @@ nav ul {
 }
 
 nav {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 section div {
@@ -91,7 +87,7 @@ section div {
 }
 
 div {
-  margin: 20px 10px
+  margin: 10px 10px
   border: green bold;
 }
 
@@ -132,7 +128,7 @@ vertical-align: bottom;
 
 
 .groupPhotos{
-  margin-top: 50px;
+margin-top: 50px;
   margin-left: 300px;
 }
 
