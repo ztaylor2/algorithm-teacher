@@ -24,7 +24,7 @@ header {
   margin: 20px 20px;
   display: inline-block;
 }
-<<<<<<< HEAD
+
 figure {
   background-color: #AFD7DB;
 }
@@ -37,6 +37,13 @@ figure {
 /*
 figure .box1 {
 >>>>>>> 95251c135f86ffba2d0d52a34790d56dd0edfbf6
+=======
+/* figure {
+  background-color: #AFD7DB;
+} */
+/*
+figure .box1 {
+>>>>>>> master
     background-color: #AFD7DB;
 } */
 
