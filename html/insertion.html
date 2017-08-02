@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Bubble Sort</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Insertion Sort</title>
+    <link rel="stylesheet" href="../style/nav-bar.css" />
+    <link rel="stylesheet" href="../style/style.css" />
   </head>
   <body>
-
-
 
 
     <header>
@@ -16,30 +15,30 @@
         <ul>
           <li>
             <div class="rotating">
-              <figure class="box1"> <a href="index.html">Home</a></figure>
+              <figure class="box1"> <a href="../index.html">Home</a></figure>
             </div>
           </li>
           <li class="dropdown">
             <h2 id="dropdownAlgorithms">Algorithms</h2>
             <div class="dropdown-content">
               <h3 class="algoHeading">Sorting</h3>
-                <a href="bubble.html">Bubble Sort</a>
+                <a href="../html/bubble.html">Bubble Sort</a>
                 <br />
-                <a href="insertion.html">Insertin Sort</a>
+                <a href="../html/insertion.html">Insertion Sort</a>
                 <br />
-                <a href="selection.html">Selection Sort</a>
+                <a href="../html/selection.html">Selection Sort</a>
                 <br />
-                <a href="bubble.html">Quick Sort</a>
+                <a href="../html/bubble.html">Quick Sort</a>
               <h3 class="algoHeading">Searching</h3>
-                <a href="linear-search/linear-search.html">Linear Search</a>
+                <a href="../html/linear-search.html">Linear Search</a>
                 <br />
-                <a href="binary-search/binary-search.html">Binary Search</a>
+                <a href="../html/binary-search.html">Binary Search</a>
               <h3 class="algoHeading">Shuffling</h3>
-                <a href="shuffle/shuffle.html">Fisher Bates</a>
+                <a href="../shuffle/shuffle.html">Fisher Bates</a>
             </div>
           </li>
           <li>
-            <a href="about.html" id="aboutLink">About us</a>
+            <a href="../about.html" id="aboutLink">About us</a>
           </li>
         </ul>
       </nav>
@@ -49,8 +48,8 @@
 
 
 
-    <h1>Bubble Sort</h1>
-    <p align="center">Bubble sort is a sorting algorithm that will sort an array of numbers. </p>
+    <h1>Insertion Sort</h1>
+    <p align="center">Insertion sort is a sorting algorithm that will sort an array of numbers. </p>
 
     <!-- form to input numbers -->
     <form>
@@ -89,11 +88,11 @@
 
 
       <button type="submit" id="playButton" class="submitButton"><span>Next Step</span></button>
-      <p id="description">First, it will compaire the value of the first two numbers in the array.  If the number at [1] is less than the number at [0], the numbers will swap, moving the lower number to the left.</p>
+      <p id="description">Right off the bat [0] is considered fully sorted. </p>
 
       <button type="submit" id="resetButton" class="submitButton"><span>Reset</span></button>
     </section>
 
-    <script src="bubble.js" type="text/javascript"></script>
-</body>
+    <script src="../scripts/insertion.js" type="text/javascript"></script>
+  </body>
 </html>
