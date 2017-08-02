@@ -4,10 +4,10 @@ var cardValue = ['2','3','4','5','6','7','8','9','10','jack','queen','king','ace
 var cardSuit = ['clubs','hearts','spades','diamonds'];
 var deck = [];
 var leftCardPosition = [10,100,190,280,370,460,550,640,730,820,910,1000,1090,10,100,190,280,370,460,550,640,730,820,910,1000,1090,10,100,190,280,370,460,550,640,730,820,910,1000,1090,10,100,190,280,370,460,550,640,730,820,910,1000,1090];
-var topCardPositionRow1 = 80;
-var topCardPositionRow2 = 205;
-var topCardPositionRow3 = 330;
-var topCardPositionRow4 = 455;
+var topCardPositionRow1 = 200;
+var topCardPositionRow2 = 325;
+var topCardPositionRow3 = 450;
+var topCardPositionRow4 = 575;
 var currentIndex;
 var pressPlay = false;
 
@@ -49,6 +49,18 @@ function shuffle(event) {
 }
 
 /*________________________ function to first display cards ____________________*/
+
+
+
+function welcome() {
+  var welcomeDiv = document.createElement('div');
+  welcomeDiv.style.border = 'solid';
+  welcomeDiv.style.width = '500px';
+  welcomeDiv.style.height = '500px';
+  welcomeDiv.style.zIndex = '3';
+  welcomeDiv.style.background = 'white';
+  document.body.appendChild(welcomeDiv);
+}
 
 function displayCards() {
   buildDeck();
