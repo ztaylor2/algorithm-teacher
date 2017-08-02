@@ -1,0 +1,84 @@
+
+#homeLink {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: black;
+}
+
+#homeLink:hover {
+  color: #3D9CA8;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+#info {
+  margin: 0 auto;
+  width: 600px;
+  margin-bottom: 20px;
+}
+
+#arrayBoxes {
+  height: 300px;
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#showArray {
+  text-align: center;
+}
+
+#showArray li {
+  border: solid 1px black;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 15px 35px 15px 0px;
+  width: 75px;
+  height: 75px;
+  text-align:center;
+  line-height: 75px;
+  font-size: 28px;
+}
+
+.step {
+  cursor: pointer;
+  padding: 15px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3D9CA8;
+}
+
+.step span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.step span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.step:hover span {
+  padding-right: 25px;
+}
+
+.step:hover span:after {
+  opacity: 1;
+  right: 0;
+}
