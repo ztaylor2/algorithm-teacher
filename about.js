@@ -1,9 +1,18 @@
 'use strict';
+
+
+
+//-----------------ZACH-----------------//
+
 function zachBio(){
   if(document.getElementById('zachBioDiv')){
     document.getElementById('zachBioDiv').remove();
   }
   var zachBioDiv = document.createElement('div');
+  var zachBioText = document.createElement('textContent');
+  var zachButton = document.createElement('button');
+  var zachSpan = document.createElement('span');
+
   zachBioDiv.setAttribute('id', 'zachBioDiv');
   zachBioDiv.style.width = '300px';
   zachBioDiv.style.height = '225px';
@@ -23,14 +32,21 @@ function zachBio(){
   zachBioDiv.style.overflow = 'hidden';
   document.body.appendChild(zachBioDiv);
 
+  zachButton.setAttribute('id', 'zachButton');
+  zachButton.style.position = 'relative';
+  zachButton.style.margin = '0px';
+  zachButton.style.top = '0px';
+  zachButton.style.padding = '15px';
 
-  var zachBioText = document.createElement('textContent');
+  zachSpan.textContent = 'Continue';
+
+
   zachBioText.setAttribute('id', 'zachBioText');
-  zachBioText.textContent = 'Hey there! My name is Ivette.  I studied improv comedy at Second City, taught middle school and am now coding coding coding.  Come by, say "Hi", I love meeng new people tada!';
-  zachBioText.style.position = 'relative';
+  zachBioText.textContent = 'Hi my name is Zach I went to Gonzaga...';
+  zachBioText.style.position = 'absolute';
   zachBioText.style.fontFamily = 'sans-serif';
   zachBioText.style.color = 'white';
-  zachBioText.style.indentValue = '20px';
+  zachBioText.style.indentValue = '10px';
   zachBioText.style.width = '375px';
   zachBioText.style.height = '200px';
   zachBioText.style.fontSize = '20px';
@@ -39,11 +55,22 @@ function zachBio(){
   zachBioText.style.verticalAlign = 'middle';
   zachBioText.style.textAlign = 'center';
   zachBioDiv.appendChild(zachBioText);
+  zachButton.appendChild(zachSpan);
+  zachBioDiv.appendChild(zachButton);
 
 }
 document.getElementById('zach').addEventListener('click', zachBio);
+document.getElementById('zachButton').addEventListener('click', removeZachButton);
 
 
+function removeZachButton(){
+  document.getElementById(zachBioDiv).remove();
+}
+
+
+
+
+//-----------------IVETTE-----------------//
 
 function ivetteBio(){
   if(document.getElementById('ivetteBioDiv')){
@@ -91,6 +118,8 @@ document.getElementById('ivette').addEventListener('click', ivetteBio);
 
 
 
+
+//-----------------JOHN-----------------//
 
 
 
@@ -140,6 +169,8 @@ document.getElementById('john').addEventListener('click', johnBio);
 
 
 
+
+//-----------------DANIEL-----------------//
 
 
 
