@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="style/nav-bar.css" type="text/css" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet">
     <title>Animate Your Algorithm!</title>
   </head>
@@ -13,16 +14,19 @@
       <ul>
         <li>
           <div class="rotating">
-            <figure class="box1"> <a href="index.html">Home</a></figure>
+            <figure class="box1"><div  id="logo"><a href="index.html"> Algorithms</a></div></figure>
           </div>
         </li>
-        <li class="dropdown">
-          <h2 id="dropdownAlgorithms">Algorithms</h2>
+        <li id="floatRight">
+          <a href="about.html" id="aboutLink">About us</a>
+        </li>
+        <li class="dropdown" id="floatRight">
+          <h2 id="dropdownAlgorithms">Tutorials</h2>
           <div class="dropdown-content">
             <h3 class="algoHeading">Sorting</h3>
               <a href="html/bubble.html">Bubble Sort</a>
               <br />
-              <a href="html/insertion.html">Insertin Sort</a>
+              <a href="html/insertion.html">Insertion Sort</a>
               <br />
               <a href="html/selection.html">Selection Sort</a>
               <br />
@@ -35,9 +39,7 @@
               <a href="shuffle/shuffle.html">Fisher Bates</a>
           </div>
         </li>
-        <li>
-          <a href="about.html" id="aboutLink">About us</a>
-        </li>
+
       </ul>
     </nav>
 
