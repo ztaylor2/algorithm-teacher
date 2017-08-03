@@ -139,7 +139,9 @@ function welcome() {
 }
 
 function removeWelcome() {
-  document.getElementById('welcomeDiv').remove();
+  if (welcomeDiv){
+    document.getElementById('welcomeDiv').remove();
+  }
 }
 
 function message51(randomIndex) {
