@@ -400,7 +400,7 @@ function showCode(){
   showCodeMessageRandomToTemp.style.left = '300px';
 
   var codeImg = document.createElement('img');
-  codeImg.src = 'img/functionCode.png';
+  codeImg.src = '../images/img/functionCode.png';
   codeImg.style.maxWidth = '500px';
   showCodeDiv.appendChild(codeImg);
 
@@ -428,7 +428,7 @@ function displayCards() {
   var content = document.getElementById('cards-div');
   for(var i = 0; i < deck.length; i++){
     var img = document.createElement('img');
-    img.setAttribute('src','img/' + deck[i]);
+    img.setAttribute('src','../images/img/' + deck[i]);
     img.setAttribute('id', 'card' + i);
     content.appendChild(img);
   }
@@ -468,7 +468,7 @@ function displayShuffle(currentIndex, randomIndex) {
   }
   for(var i = 0; i < deck.length; i++){
     var img = document.createElement('img');
-    img.setAttribute('src','img/' + deck[i]);
+    img.setAttribute('src','../images/img/' + deck[i]);
     img.setAttribute('id', 'card' + i);
     content.appendChild(img);
   }
