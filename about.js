@@ -1,5 +1,81 @@
 'use strict';
+
+
+
+//-----------------ZACH-----------------//
+
+function zachBio(){
+  if(document.getElementById('zachBioDiv')){
+    document.getElementById('zachBioDiv').remove();
+  }
+  var zachBioDiv = document.createElement('div');
+  var zachBioText = document.createElement('textContent');
+  var zachButton = document.createElement('button');
+  var zachSpan = document.createElement('span');
+
+  zachBioDiv.setAttribute('id', 'zachBioDiv');
+  zachBioDiv.style.width = '300px';
+  zachBioDiv.style.height = '225px';
+  zachBioDiv.style.margin = 'auto';
+  zachBioDiv.style.background = 'white';
+  zachBioDiv.style.border = 'solid';
+  zachBioDiv.style.position = 'relative';
+  zachBioDiv.style.zIndex = '1';
+  zachBioDiv.style.bottom = '800px';
+  zachBioDiv.style.backgroundColor = '#3D9CA8';
+  zachBioDiv.style.borderRadius = '10px';
+  zachBioDiv.style.borderColor = 'BCD693';
+  zachBioDiv.style.borderTopColor = '#BCD693';
+  zachBioDiv.style.borderTopWidth = '20px';
+  zachBioDiv.style.fontSize = '20px';
+  zachBioDiv.style.fontFamily = 'italic';
+  zachBioDiv.style.overflow = 'hidden';
+  document.body.appendChild(zachBioDiv);
+
+  zachButton.setAttribute('id', 'zachButton');
+  zachButton.style.position = 'relative';
+  zachButton.style.margin = '0px';
+  zachButton.style.top = '0px';
+  zachButton.style.padding = '15px';
+
+  zachSpan.textContent = 'Continue';
+
+
+  zachBioText.setAttribute('id', 'zachBioText');
+  zachBioText.textContent = 'Hi my name is Zach I went to Gonzaga...';
+  zachBioText.style.position = 'absolute';
+  zachBioText.style.fontFamily = 'sans-serif';
+  zachBioText.style.color = 'white';
+  zachBioText.style.indentValue = '10px';
+  zachBioText.style.width = '375px';
+  zachBioText.style.height = '200px';
+  zachBioText.style.fontSize = '20px';
+  zachBioText.style.top = '0px';
+  zachBioText.style.left = '0px';
+  zachBioText.style.verticalAlign = 'middle';
+  zachBioText.style.textAlign = 'center';
+  zachBioDiv.appendChild(zachBioText);
+  zachButton.appendChild(zachSpan);
+  zachBioDiv.appendChild(zachButton);
+
+}
+document.getElementById('zach').addEventListener('click', zachBio);
+document.getElementById('zachButton').addEventListener('click', removeZachButton);
+
+
+function removeZachButton(){
+  document.getElementById(zachBioDiv).remove();
+}
+
+
+
+
+//-----------------IVETTE-----------------//
+
 function ivetteBio(){
+  if(document.getElementById('ivetteBioDiv')){
+    document.getElementById('ivetteBioDiv').remove();
+  }
   var ivetteBioDiv = document.createElement('div');
   ivetteBioDiv.setAttribute('id', 'ivetteBioDiv');
   ivetteBioDiv.style.width = '300px';
@@ -43,9 +119,14 @@ document.getElementById('ivette').addEventListener('click', ivetteBio);
 
 
 
+//-----------------JOHN-----------------//
+
 
 
 function johnBio(){
+  if(document.getElementById('johnBioDiv')){
+    document.getElementById('johnBioDiv').remove();
+  }
   var johnBioDiv = document.createElement('div');
   johnBioDiv.setAttribute('id', 'johnBioDiv');
   johnBioDiv.style.width = '300px';
@@ -89,13 +170,18 @@ document.getElementById('john').addEventListener('click', johnBio);
 
 
 
+//-----------------DANIEL-----------------//
+
 
 
 function danielBio(){
+  if(document.getElementById('danielBioDiv')){
+    document.getElementById('danielBioDiv').remove();
+  }
   var danielBioDiv = document.createElement('div');
   danielBioDiv.setAttribute('id', 'danielBioDiv');
-  danielBioDiv.style.width = '400px';
-  danielBioDiv.style.height = '300px';
+  danielBioDiv.style.width = '300px';
+  danielBioDiv.style.height = '225px';
   danielBioDiv.style.margin = 'auto';
   danielBioDiv.style.background = 'white';
   danielBioDiv.style.border = 'solid';
@@ -106,7 +192,7 @@ function danielBio(){
   danielBioDiv.style.borderRadius = '10px';
   danielBioDiv.style.borderColor = 'BCD693';
   danielBioDiv.style.borderTopColor = '#BCD693';
-  danielBioDiv.style.borderTopWidth = '75px';
+  danielBioDiv.style.borderTopWidth = '10px';
   danielBioDiv.style.fontSize = '20px';
   danielBioDiv.style.fontFamily = 'italic';
   danielBioDiv.style.overflow = 'hidden';

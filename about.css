@@ -1,11 +1,12 @@
-<<<<<<< HEAD
-=======
+
+
 body {
-  background-color: #EFD8A1;
+  background-color: white;
   font-family: Helvetica, sans-serif;
   /*outline: 1px dashed orange;*/
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 
@@ -131,34 +132,86 @@ header {
 .flat .box {
   border-radius: 6px;
 }
->>>>>>> master
 
-div{
-  border: 1px dashed black;
+.flat {
+  background: #3D9CA8;
+  border: 1px dashed #cecfd5;
+  float: left;
+  margin: 20px 20px;
+  display: inline-block;
+}
+figure {
+  background-color: #AFD7DB;
+}
+
+figure .box1 {
+    background-color: #AFD7DB;
 }
 
 
-/*------------------Header--------------*/
-.header{
+
+.box1 {
+  background: #BCD693;
+  height: 95px;
+  line-height: 95px;
   text-align: center;
+  width: 95px;
 }
+
+.rotating {
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.rotating:hover {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.box1 {
+  transform: rotate(-55deg);
+}*/
 
 #siteHeading{
+  color: #AF7575;
+  font-weight: bold;
   font-size: 40px;
-  font-family: Helvetica, sans-serif;
-  color: #3D9CA8;
-  margin-bottom: 0px;
+  text-align: center;
+  top: 100px;
+}
+#subHeading{
+  font-size: 20px;
+  font-style: italic;
+  color: #BCD693;
+  padding-top: 0px;
+  text-align: center;
+ }
+/*-------------------NAVIGATION---------------*/
+nav ul li {
+  color: green;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style-type: none;
 }
 
 nav {
   margin-bottom: 50px;
 }
 
-#subHeading{
-  font-size: 20px;
+section div {
+  font-size: 40px;
   font-style: italic;
-  color: #BCD693;
-  padding-top: 0px;
   font-family: sans-serif;
 }
 
@@ -169,118 +222,136 @@ div {
 
 
 /*-----------------IMAGES-------------*/
-.dialog{
-margin-top: 50px;
-
-text-align: center;
+.groupPhoto{
+  margin-top: 50px;
+  margin-left: 300px;
 }
 
-/*=====ZACH====*/
 #zach{
   height:405px;
   width:400px;
-  border-top: 10px solid;
+  border-top: 10px solid black;
   margin-bottom: 25px;
   margin-right: 25px;
   display: inline;
-  border-radius: 10px;
   border: 3px solid #3D9CA8;
-
-
+  border-radius: 10px;
 }
 #zach:hover{
   border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+    border-radius: 10px;
 }
 
-#zachSocial{
-  float: left;
-  position: relative;
-  bottom: 550px;
-  left: 310px;
-  opacity:0.5;
 
-}
-#zachSocial:hover{
-  opacity:1;
-}
-
-/*=====IVETTE=====*/
 #ivette{
   height:405px;
   width:400px;
   margin-bottom: 25px;
   border: 3px solid #3D9CA8;
   border-radius: 10px;
-
 }
 #ivette:hover{
   border: 5px solid #3D9CA8;
-}
-#ivetteSocial{
-  float: right;
-  position: relative;
-  margin: auto;
-  bottom: 550px;
-  right: 510px;
-  opacity:0.5;
-
-}
-#ivetteSocial:hover{
-  opacity:1;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  border-radius: 10px;
 }
 
-
-/*=====JOHN=====*/
 #john{
   height:405px;
   width:400px;
   margin-right: 25px;
   border: 3px solid #3D9CA8;
   border-radius: 10px;
-  margin-bottom: 50px;
 }
 #john:hover{
   border: 5px solid #3D9CA8;
-}
-#johnSocial{
-  float: left;
-  position: relative;
-  bottom: 110px;
-  left: 135px;
-  opacity:0.5;
-
-}
-#johnSocial:hover{
-  opacity:1;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  border-radius: 10px;
 }
 
-/*=====DANIEL=====*/
+
 #daniel{
   height:405px;
   width:400px;
   border: 3px solid #3D9CA8;
   border-radius: 10px;
-  margin-bottom: 50px;
-
 }
 #daniel:hover{
   border: 5px solid #3D9CA8;
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  border-radius: 10px;
+}
+
+
+
+#zachSocial{
+  position: absolute;
+  float: left;
+  position: relative;
+  bottom: 495px;
+  left: 310px;
+  opacity:0.5;
+
+}
+#zachSocial:hover{
+        opacity:1;
+}
+
+
+#ivetteSocial{
+  float: right;
+  position: relative;
+  bottom: 495px;
+  right: 260px;
+  opacity:0.5;
+}
+#ivetteSocial:hover{
+        opacity:1;
+}
+
+#johnSocial{
+  float: left;
+  position: relative;
+  bottom: 55px;
+  left: 130px;
+  opacity:0.5;
+}
+#johnSocial:hover{
+        opacity:1;
 }
 
 #danielSocial{
   float: right;
   position: relative;
-  bottom: 110px;
-  right: 340px;
+  bottom: 55px;
+  right: 80px;
   opacity:0.5;
 }
 #danielSocial:hover{
-  opacity:1;
+        opacity:1;
 }
 
-
-
-/*---------------FOOTER---------------------*/
 footer{
   text-align: center;
   width: 100%;
@@ -297,3 +368,47 @@ footer{
   margin-bottom: auto;
   font: 15px arial, sans-serif
 }
+/*#groupPhoto{
+  display: inline-block;
+}*/
+
+
+/*#groupPhoto{
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 275px;
+
+}
+#setOne{
+  padding-bottom: 50px;
+
+}
+
+#zach{
+  width: 400px;
+  height: 405px;
+  padding-right: 50px;
+
+}
+#ivette{
+  width: 400px;
+  height: 405px;
+
+}
+
+#setTwo{
+  padding-bottom: 50px;
+}
+#john{
+  width: 400px;
+  height: 405px;
+  padding-right: 50px;
+
+}
+
+#daniel{
+  width: 400px;
+  height: 405px;
+
+}*/
