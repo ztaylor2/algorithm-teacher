@@ -475,7 +475,7 @@ function displayShuffle(currentIndex, randomIndex) {
     content.appendChild(img);
   }
   moveCards();
-  highlight(currentIndex, randomIndex)
+  highlight(currentIndex, randomIndex);
 }
 
 function highlight(currentIndex, randomIndex){
