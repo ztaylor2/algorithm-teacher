@@ -1,6 +1,5 @@
 
 
-
 #cards {
   margin:30px 0px;
 }
@@ -20,20 +19,41 @@
 }
 
 #buttons {
-  /*margin: 0 auto;*/
-  width: 1160px;
   text-align: center;
-
+  margin: 20px;
 }
 
-#step {
-margin: 10px 5px;
-height: 40px;
-width: 70px;
+button {
+  cursor: pointer;
+  padding: 15px;
+  display: inline-block;
+  margin: 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3D9CA8;
 }
 
-#play {
-  margin: 10px 5px;
-  height: 40px;
-  width: 70px;
+button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
 }

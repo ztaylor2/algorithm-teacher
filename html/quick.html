@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel = "stylesheet" href = "../style/nav-bar.css">
-    <link rel = "stylesheet" href = "shuffle.css">
-    <title></title>
+    <link rel = "stylesheet" href = "../style/nav-bar.css"></link>
+    <link rel="stylesheet" href="../style/quick.css"></link>
+    <title>Quicksort</title>
   </head>
   <body>
-
     <header>
 
       <nav>
@@ -45,16 +44,20 @@
 
     </header>
 
+    <h1>Quicksort Algorithm</h1>
+  
+    <p align="center" id = "info">Quicksort is a comparison sort that has an average performance of O(n log n) and is an efficient way to put elements in an array in order.</p>
 
+  <div id = "arrayBoxes">
+<!-- box for array -->
+    <ul id = "showArray">
+    </ul>
 
-    <div id = "cards-div">
-    </div>
-
-  <div id = "buttons">
-    <button id = "step" class = "step"><span>Shuffle</span></button>
-    <button id = "play" class = "play"><span>Play</span></button>
-    <button id = "showCode" class = "showCode"><span>Show Code</span></button>
+    <button type="step" id="step" class="step"><span>Next Step</span></button>
+    <p id = "stepText"></p>
   </div>
-    <script src = 'shuffle.js'></script>
+
+
+    <script src="../scripts/quick.js" type="text/javascript"></script>
   </body>
 </html>
