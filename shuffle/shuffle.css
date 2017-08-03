@@ -1,4 +1,6 @@
-
+/**{
+  outline: dashed 1px orange;
+}*/
 /*nav bar start*/
 
 header {
@@ -123,7 +125,7 @@ nav ul {
   margin: 20px;
 }
 
-#step {
+button {
   cursor: pointer;
   padding: 15px;
   display: inline-block;
@@ -134,13 +136,13 @@ nav ul {
   background-color: #3D9CA8;
 }
 
-#step span {
+button span {
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-#step span:after {
+button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -149,46 +151,11 @@ nav ul {
   transition: 0.5s;
 }
 
-#step:hover span {
+button:hover span {
   padding-right: 25px;
 }
 
-#step:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.play {
-  cursor: pointer;
-  padding: 15px;
-  display: inline-block;
-  margin: 20px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #3D9CA8;
-}
-
-.play span {
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.play span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.play:hover span {
-  padding-right: 25px;
-}
-
-.play:hover span:after {
+button:hover span:after {
   opacity: 1;
   right: 0;
 }
