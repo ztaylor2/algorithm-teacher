@@ -1,15 +1,33 @@
 'use strict';
+var popup = document.getElementById('popup');
 
 function homeButton_Click(){
+  var name = document.getElementById('personName_input').value;
   var homePageHello = document.createElement('button');
-  homePageHello.setAttribute('id','homePageHello');
-  homePageHello.style.width = '40px';
-  homePageHello.style.height = '50px';
-  homePageHello.style.backgroundcolor = '#C7D7DB';
-  homePageHello.style.color = '#EFD8A1';
-  homePageHello.style.zIndez = '3';
-  document.body.appendChild(homePageHello);
+  homePageHello.style.id = 'popupButton';
+  popup.setAttribute('id','homePageHello');
+  popup.style.width = '80px';
+  popup.style.height = '50px';
+  popup.style.padding = '100px';
+  popup.style.backgroundColor = 'white';
+  popup.style.color = '#EFD8A1';
+  popup.style.zIndez = '1';
+  popup.style.display = 'block';
+  // popup.style.margin = 'auto';
+  popup.style.position = 'fixed';
+  popup.style.left = '50%';
+  popup.style.bottom = '260px';
+  popup.style.marginLeft = '-140px';
+  popup.textContent = name;
+  popup.appendChild(homePageHello);
+  homePageHello.addEventListener('click', popupButtonHandler);
+}
+function popupButtonHandler(){
+  popup.style.visibility = 'hidden';
 }
 
 
-document.getElementById('personName_input').addEventListener('click', homeButton_Click);
+
+
+
+document.getElementById('homeButton_Click').addEventListener('click', homeButton_Click);
