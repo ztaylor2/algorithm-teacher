@@ -8,6 +8,32 @@ body {
 }
 
 
+#dialogoverlay{
+  display: none;
+  opacity: .8;
+  position: fixed/absolute;
+  top: 0px;
+  background: #FFF;
+  width: 100%;
+  z-index: 10;
+}
+
+#dialogbox{
+  display: none;
+  position: fixed;
+  background: #000;
+  border-radius: 7px;
+  width: 550px;
+  z-index: 10;
+}
+
+
+div{
+  border: 1px dashed black;
+}
+
+
+
 
 
 
@@ -131,7 +157,7 @@ nav ul {
   padding-top: 0px;
 }
 /*-----------------IMAGES-------------*/
-.groupPhotos{
+.dialog{
 margin-top: 50px;
 
 text-align: center;
@@ -157,7 +183,7 @@ text-align: center;
 #zachSocial{
   float: left;
   position: relative;
-  bottom: 300px;
+  bottom: 550px;
   left: 310px;
   opacity:0.5;
 
@@ -181,8 +207,9 @@ text-align: center;
 #ivetteSocial{
   float: right;
   position: relative;
-  bottom: 555px;
-  right: 290px;
+  margin: auto;
+  bottom: 550px;
+  right: 510px;
   opacity:0.5;
 
 }
@@ -207,7 +234,7 @@ text-align: center;
   float: left;
   position: relative;
   bottom: 110px;
-  right: 75px;
+  left: 135px;
   opacity:0.5;
 
 }
@@ -232,7 +259,7 @@ text-align: center;
   float: right;
   position: relative;
   bottom: 110px;
-  right: 100px;
+  right: 340px;
   opacity:0.5;
 }
 #danielSocial:hover{
@@ -248,10 +275,12 @@ footer{
   height: 15%;
   border: 1px solid #AFD7DB;
   background: #B2D4DB;
+  vertical-align: text-bottom;
 
 }
 
 #footerHead{
+  color: white;
   text-align: center;
   margin-bottom: auto;
   font: 15px arial, sans-serif
