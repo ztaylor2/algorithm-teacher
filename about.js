@@ -87,6 +87,8 @@ function ivetteBio(){
   }
   var ivetteBioDiv = document.createElement('div');
   var ivetteBioText = document.createElement('textContent');
+  var ivetteButton = document.createElement('button');
+  var ivetteSpan = document.createElement('span');
 
   ivetteBioDiv.setAttribute('id', 'ivetteBioDiv');
   ivetteBioDiv.style.width = '300px';
@@ -104,10 +106,18 @@ function ivetteBio(){
   ivetteBioDiv.style.borderTopWidth = '20px';
   ivetteBioDiv.style.fontSize = '20px';
   ivetteBioDiv.style.fontFamily = 'italic';
-  ivetteBioDiv.style.overflow = 'hidden';
+  ivetteBioDiv.style.overflow = 'scroll';
   document.body.appendChild(ivetteBioDiv);
 
+  ivetteButton.setAttribute('id', 'ivetteButton');
+  ivetteButton.style.position = 'relative';
+  ivetteButton.style.margin = '0px';
+  ivetteButton.style.top = '0px';
+  ivetteButton.style.left = '0px';
+  ivetteButton.style.padding = '15px';
 
+  ivetteSpan.textContent = 'Continue';
+  ivetteButton.appendChild(ivetteSpan);
 
   ivetteBioText.setAttribute('id', 'ivetteBioText');
   ivetteBioText.textContent = 'Hey there! My name is Ivette.  I studied improv comedy at Second City, taught middle school and am now coding coding coding.  Come by, say "Hi", I love meeting new people!';
@@ -123,9 +133,18 @@ function ivetteBio(){
   ivetteBioText.style.verticalAlign = 'middle';
   ivetteBioText.style.textAlign = 'center';
   ivetteBioDiv.appendChild(ivetteBioText);
+  ivetteBioDiv.appendChild(ivetteButton);
+  ivetteButton.appendChild(ivetteSpan);
 
+  document.getElementById('ivetteButton').addEventListener('click', removeIvetteButton);
 }
 document.getElementById('ivette').addEventListener('click', ivetteBio);
+
+function removeIvetteButton(){
+  if(ivetteBioDiv){
+    document.getElementById('ivetteBioDiv').remove();
+  }
+}
 
 
 
@@ -139,9 +158,13 @@ function johnBio(){
     document.getElementById('johnBioDiv').remove();
   }
   var johnBioDiv = document.createElement('div');
+  var johnBioText = document.createElement('textContent');
+  var johnButton = document.createElement('button');
+  var johnSpan = document.createElement('span');
+
   johnBioDiv.setAttribute('id', 'johnBioDiv');
   johnBioDiv.style.width = '300px';
-  johnBioDiv.style.height = '225px';
+  johnBioDiv.style.height = '400px';
   johnBioDiv.style.margin = 'auto';
   johnBioDiv.style.background = 'white';
   johnBioDiv.style.border = 'solid';
@@ -155,13 +178,21 @@ function johnBio(){
   johnBioDiv.style.borderTopWidth = '20px';
   johnBioDiv.style.fontSize = '20px';
   johnBioDiv.style.fontFamily = 'italic';
-  johnBioDiv.style.overflow = 'hidden';
+  johnBioDiv.style.overflow = 'scroll';
   document.body.appendChild(johnBioDiv);
 
+  johnButton.setAttribute('id', 'johnButton');
+  johnButton.style.position = 'relative';
+  johnButton.style.margin = '0px';
+  johnButton.style.top = '175px';
+  johnButton.style.left = '110px';
+  johnButton.style.padding = '15px';
 
-  var johnBioText = document.createElement('textContent');
+  johnSpan.textContent = 'Continue';
+  johnButton.appendChild(johnSpan);
+
   johnBioText.setAttribute('id', 'johnBioText');
-  johnBioText.textContent = '';
+  johnBioText.textContent = 'John spent his youth generally indifferent to anything software related, as long as his Diablo II was running all was well in the tech world.  That all change after seeing how, as Marc Andreessen put it, "software is eating the world.", and he wanted to be a part of it. Now he plans to complete the 401 Python course at Code Fellows and become a software engineer.';
   johnBioText.style.position = 'relative';
   johnBioText.style.fontFamily = 'sans-serif';
   johnBioText.style.color = 'white';
@@ -174,9 +205,22 @@ function johnBio(){
   johnBioText.style.verticalAlign = 'middle';
   johnBioText.style.textAlign = 'center';
   johnBioDiv.appendChild(johnBioText);
+  johnBioDiv.appendChild(johnButton);
+  johnButton.appendChild(johnSpan);
+
+  document.getElementById('johnButton').addEventListener('click', removeJohnButton);
 
 }
 document.getElementById('john').addEventListener('click', johnBio);
+
+
+function removeJohnButton(){
+  if(johnBioDiv){
+    document.getElementById('johnBioDiv').remove();
+  }
+}
+
+
 
 
 
@@ -190,6 +234,11 @@ function danielBio(){
     document.getElementById('danielBioDiv').remove();
   }
   var danielBioDiv = document.createElement('div');
+  var danielBioText = document.createElement('textContent');
+  var danielButton = document.createElement('button');
+  var danielSpan = document.createElement('span');
+
+
   danielBioDiv.setAttribute('id', 'danielBioDiv');
   danielBioDiv.style.width = '300px';
   danielBioDiv.style.height = '225px';
@@ -210,7 +259,17 @@ function danielBio(){
   document.body.appendChild(danielBioDiv);
 
 
-  var danielBioText = document.createElement('textContent');
+  danielButton.setAttribute('id', 'danielButton');
+  danielButton.style.position = 'relative';
+  danielButton.style.margin = '0px';
+  danielButton.style.top = '175px';
+  danielButton.style.left = '110px';
+  danielButton.style.padding = '15px';
+
+  danielSpan.textContent = 'Continue';
+  danielButton.appendChild(danielSpan);
+
+
   danielBioText.setAttribute('id', 'danielBioText');
   danielBioText.textContent = 'Hello! My name is Daniel Pillay. I was born and raised in Mountlake Terrace, WA and I am an Air Force veteran. I am glad we could help you guys learn algorithms!';
   danielBioText.style.position = 'relative';
@@ -225,9 +284,19 @@ function danielBio(){
   danielBioText.style.verticalAlign = 'middle';
   danielBioText.style.textAlign = 'center';
   danielBioDiv.appendChild(danielBioText);
+  danielBioDiv.appendChild(danielButton);
+  danielButton.appendChild(danielSpan);
+
+  document.getElementById('danielButton').addEventListener('click', removeDanielButton);
 
 }
 document.getElementById('daniel').addEventListener('click', danielBio);
+
+function removeDanielButton(){
+  if(danielBioDiv){
+    document.getElementById('danielBioDiv').remove();
+  }
+}
 
 
 
