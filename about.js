@@ -14,7 +14,7 @@ function zachBio(){
   var zachSpan = document.createElement('span');
 
   zachBioDiv.setAttribute('id', 'zachBioDiv');
-  zachBioDiv.style.width = '300px';
+  zachBioDiv.style.width = '375px';
   zachBioDiv.style.height = '225px';
   zachBioDiv.style.margin = 'auto';
   zachBioDiv.style.background = 'white';
@@ -28,21 +28,25 @@ function zachBio(){
   zachBioDiv.style.borderTopColor = '#BCD693';
   zachBioDiv.style.borderTopWidth = '20px';
   zachBioDiv.style.fontSize = '20px';
+  zachBioDiv.style.textAlign = 'center';
   zachBioDiv.style.fontFamily = 'italic';
-  zachBioDiv.style.overflow = 'hidden';
+  zachBioDiv.style.overflow = 'scroll';
   document.body.appendChild(zachBioDiv);
 
   zachButton.setAttribute('id', 'zachButton');
   zachButton.style.position = 'relative';
   zachButton.style.margin = '0px';
-  zachButton.style.top = '0px';
+  zachButton.style.top = '175px';
+  zachButton.style.left = '0px';
   zachButton.style.padding = '15px';
 
+
   zachSpan.textContent = 'Continue';
+  zachButton.appendChild(zachSpan);
 
 
   zachBioText.setAttribute('id', 'zachBioText');
-  zachBioText.textContent = 'Hi my name is Zach I went to Gonzaga...';
+  zachBioText.textContent = 'Zach Taylor graduated from Gonzaga University cum laude with a degree in mechanical engineering.  He has been interested in software development for a while now so he decided to attend Codefellows and become a software engineer.';
   zachBioText.style.position = 'absolute';
   zachBioText.style.fontFamily = 'sans-serif';
   zachBioText.style.color = 'white';
@@ -55,17 +59,22 @@ function zachBio(){
   zachBioText.style.verticalAlign = 'middle';
   zachBioText.style.textAlign = 'center';
   zachBioDiv.appendChild(zachBioText);
-  zachButton.appendChild(zachSpan);
   zachBioDiv.appendChild(zachButton);
+  zachButton.appendChild(zachSpan);
 
+  document.getElementById('zachButton').addEventListener('click', removeZachButton);
 }
 document.getElementById('zach').addEventListener('click', zachBio);
-document.getElementById('zachButton').addEventListener('click', removeZachButton);
-
 
 function removeZachButton(){
-  document.getElementById(zachBioDiv).remove();
+  if(zachBioDiv){
+    document.getElementById('zachBioDiv').remove();
+  }
 }
+
+
+
+
 
 
 
@@ -77,6 +86,10 @@ function ivetteBio(){
     document.getElementById('ivetteBioDiv').remove();
   }
   var ivetteBioDiv = document.createElement('div');
+  var ivetteBioText = document.createElement('textContent');
+  var ivetteButton = document.createElement('button');
+  var ivetteSpan = document.createElement('span');
+
   ivetteBioDiv.setAttribute('id', 'ivetteBioDiv');
   ivetteBioDiv.style.width = '300px';
   ivetteBioDiv.style.height = '225px';
@@ -93,13 +106,21 @@ function ivetteBio(){
   ivetteBioDiv.style.borderTopWidth = '20px';
   ivetteBioDiv.style.fontSize = '20px';
   ivetteBioDiv.style.fontFamily = 'italic';
-  ivetteBioDiv.style.overflow = 'hidden';
+  ivetteBioDiv.style.overflow = 'scroll';
   document.body.appendChild(ivetteBioDiv);
 
+  ivetteButton.setAttribute('id', 'ivetteButton');
+  ivetteButton.style.position = 'relative';
+  ivetteButton.style.margin = '0px';
+  ivetteButton.style.top = '30px';
+  ivetteButton.style.left = '105px';
+  ivetteButton.style.padding = '15px';
 
-  var ivetteBioText = document.createElement('textContent');
+  ivetteSpan.textContent = 'Continue';
+  ivetteButton.appendChild(ivetteSpan);
+
   ivetteBioText.setAttribute('id', 'ivetteBioText');
-  ivetteBioText.textContent = 'Hey there! My name is Ivette.  I studied improv comedy at Second City, taught middle school and am now coding coding coding.  Come by, say "Hi", I love meeng new people tada!';
+  ivetteBioText.textContent = 'Hey there! My name is Ivette.  I studied improv comedy at Second City, taught middle school and am now coding coding coding.  Come by, say "Hi", I love meeting new people!';
   ivetteBioText.style.position = 'relative';
   ivetteBioText.style.fontFamily = 'sans-serif';
   ivetteBioText.style.color = 'white';
@@ -112,9 +133,18 @@ function ivetteBio(){
   ivetteBioText.style.verticalAlign = 'middle';
   ivetteBioText.style.textAlign = 'center';
   ivetteBioDiv.appendChild(ivetteBioText);
+  ivetteBioDiv.appendChild(ivetteButton);
+  ivetteButton.appendChild(ivetteSpan);
 
+  document.getElementById('ivetteButton').addEventListener('click', removeIvetteButton);
 }
 document.getElementById('ivette').addEventListener('click', ivetteBio);
+
+function removeIvetteButton(){
+  if(ivetteBioDiv){
+    document.getElementById('ivetteBioDiv').remove();
+  }
+}
 
 
 
@@ -128,9 +158,13 @@ function johnBio(){
     document.getElementById('johnBioDiv').remove();
   }
   var johnBioDiv = document.createElement('div');
+  var johnBioText = document.createElement('textContent');
+  var johnButton = document.createElement('button');
+  var johnSpan = document.createElement('span');
+
   johnBioDiv.setAttribute('id', 'johnBioDiv');
   johnBioDiv.style.width = '300px';
-  johnBioDiv.style.height = '225px';
+  johnBioDiv.style.height = '400px';
   johnBioDiv.style.margin = 'auto';
   johnBioDiv.style.background = 'white';
   johnBioDiv.style.border = 'solid';
@@ -144,13 +178,21 @@ function johnBio(){
   johnBioDiv.style.borderTopWidth = '20px';
   johnBioDiv.style.fontSize = '20px';
   johnBioDiv.style.fontFamily = 'italic';
-  johnBioDiv.style.overflow = 'hidden';
+  // johnBioDiv.style.overflow = 'scroll';
   document.body.appendChild(johnBioDiv);
 
+  johnButton.setAttribute('id', 'johnButton');
+  johnButton.style.position = 'relative';
+  johnButton.style.margin = '0px';
+  johnButton.style.top = '100px';
+  johnButton.style.right = '50px';
+  johnButton.style.padding = '15px';
 
-  var johnBioText = document.createElement('textContent');
+  johnSpan.textContent = 'Continue';
+  johnButton.appendChild(johnSpan);
+
   johnBioText.setAttribute('id', 'johnBioText');
-  johnBioText.textContent = '';
+  johnBioText.textContent = 'John spent his youth generally indifferent to anything software related, as long as his Diablo II was running all was well in the tech world.  That all change after seeing how, as Marc Andreessen put it, "software is eating the world.", and he wanted to be a part of it. Now he plans to complete the 401 Python course at Code Fellows and become a software engineer.';
   johnBioText.style.position = 'relative';
   johnBioText.style.fontFamily = 'sans-serif';
   johnBioText.style.color = 'white';
@@ -163,9 +205,22 @@ function johnBio(){
   johnBioText.style.verticalAlign = 'middle';
   johnBioText.style.textAlign = 'center';
   johnBioDiv.appendChild(johnBioText);
+  johnBioDiv.appendChild(johnButton);
+  johnButton.appendChild(johnSpan);
+
+  document.getElementById('johnButton').addEventListener('click', removeJohnButton);
 
 }
 document.getElementById('john').addEventListener('click', johnBio);
+
+
+function removeJohnButton(){
+  if(johnBioDiv){
+    document.getElementById('johnBioDiv').remove();
+  }
+}
+
+
 
 
 
@@ -179,6 +234,11 @@ function danielBio(){
     document.getElementById('danielBioDiv').remove();
   }
   var danielBioDiv = document.createElement('div');
+  var danielBioText = document.createElement('textContent');
+  var danielButton = document.createElement('button');
+  var danielSpan = document.createElement('span');
+
+
   danielBioDiv.setAttribute('id', 'danielBioDiv');
   danielBioDiv.style.width = '300px';
   danielBioDiv.style.height = '225px';
@@ -199,7 +259,18 @@ function danielBio(){
   document.body.appendChild(danielBioDiv);
 
 
-  var danielBioText = document.createElement('textContent');
+  danielButton.setAttribute('id', 'danielButton');
+  danielButton.style.position = 'relative';
+  danielButton.style.margin = '0px';
+  danielButton.style.top = '50px';
+  danielButton.style.left = '15px';
+  danielButton.style.padding = '15px';
+  // danielButton.style.zIndex = '5';
+
+  danielSpan.textContent = 'Continue';
+  danielButton.appendChild(danielSpan);
+
+
   danielBioText.setAttribute('id', 'danielBioText');
   danielBioText.textContent = 'Hello! My name is Daniel Pillay. I was born and raised in Mountlake Terrace, WA and I am an Air Force veteran. I am glad we could help you guys learn algorithms!';
   danielBioText.style.position = 'relative';
@@ -214,28 +285,16 @@ function danielBio(){
   danielBioText.style.verticalAlign = 'middle';
   danielBioText.style.textAlign = 'center';
   danielBioDiv.appendChild(danielBioText);
+  danielBioDiv.appendChild(danielButton);
+  danielButton.appendChild(danielSpan);
+
+  document.getElementById('danielButton').addEventListener('click', removeDanielButton);
 
 }
 document.getElementById('daniel').addEventListener('click', danielBio);
 
-
-
-
-
-
-// document.getElementById('zach').addEventListener('click', function clickZach(event){
-//   window.alert('');
-// });
-
-// document.getElementById('ivette').addEventListener('click', function clickIvette(event){
-//   window.alert('Hey there! My name is Ivette.  I studied improv comedy at Second City, taught middle school and am now coding coding coding.  Come by, say "Hi", I love meeng new people tada!');
-// });
-
-// document.getElementById('john').addEventListener('click', function clickJohn(event){
-//   console.log('click John');
-//   window.alert('My name is ');
-// });
-
-// document.getElementById('daniel').addEventListener('click',  danielBio);
-// console.log('click Daniel');
-// alert('Hello! My name is Daniel Pillay. I was born and raised in Mountlake Terrace, WA and I am an Air Force veteran. I am glad we could help you guys learn algorithms!');
+function removeDanielButton(){
+  if(danielBioDiv){
+    document.getElementById('danielBioDiv').remove();
+  }
+}
