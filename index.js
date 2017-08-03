@@ -7,8 +7,9 @@ function homeButton_Click(){
   homePageHello.style.id = 'popupButton';
   popup.setAttribute('id','homePageHello');
   popup.style.width = '80px';
-  popup.style.height = '50px';
+  popup.style.height = '100px';
   popup.style.padding = '100px';
+  popup.style.text = 'black';
   popup.style.backgroundColor = 'white';
   popup.style.color = '#EFD8A1';
   popup.style.zIndez = '1';
@@ -18,7 +19,9 @@ function homeButton_Click(){
   popup.style.left = '50%';
   popup.style.bottom = '260px';
   popup.style.marginLeft = '-140px';
-  popup.textContent = name;
+  popup.textContent = name + ', get ready to learn!';
+  popup.style.top = '0px';
+  popup.style.left = '500px';
   popup.appendChild(homePageHello);
   homePageHello.addEventListener('click', popupButtonHandler);
 }
