@@ -1,16 +1,4 @@
 
-#homeLink {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  text-decoration: none;
-  font-family: sans-serif;
-  color: black;
-}
-
-#homeLink:hover {
-  color: #3D9CA8;
-}
 
 h1 {
   text-align: center;
