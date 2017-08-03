@@ -8,11 +8,8 @@ h1 {
 .box {
   background-color: black;
   color: white;
-<<<<<<< HEAD
-=======
   border-radius: 5px;
   border: 0;
->>>>>>> master
 }
 
 #box2 {
@@ -28,11 +25,7 @@ h1 {
   margin-top: 10px;
   border: none;
   border-radius: 5px;
-<<<<<<< HEAD
-  background-color: #4CAF50;
-=======
   background-color: #3D9CA8;
->>>>>>> master
 }
 
 .submitButton span {
