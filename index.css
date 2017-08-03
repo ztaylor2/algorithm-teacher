@@ -117,6 +117,11 @@ section div {
   font-family: sans-serif;
 }
 
+.algorithmHeading {
+  max-width: 960px;
+  margin: auto;
+}
+
 div {
   margin: 20px 10px
   border: green bold;
@@ -135,7 +140,7 @@ padding-left: 25px;
 
 #algorithmNames {
   margin-top: 50px;
-  margin-left: 20px;
+  margin-left: 0px;
   text-align: left;
 }
 
@@ -147,10 +152,15 @@ li {
 
 h1 {
   margin-top: 50px;
-  margin-left: 10px;
+  margin-left: 0px;
   color: #AF7575;
   font-weight: bold;
   font-size: 35px;
+}
+
+.personal_info {
+  max-width: 960px;
+  margin:auto;
 }
 
 footer, footer h3, footer div {
