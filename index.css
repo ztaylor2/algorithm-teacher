@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-color: #EFD8A1;
   font-family: Helvetica, sans-serif;
@@ -13,6 +14,16 @@ header {
   background-color: #3D9CA8;
   display: block;
 }
+<<<<<<< HEAD
+/* figure {
+  background-color: #AFD7DB;
+} */
+/*
+figure .box1 {
+    background-color: #AFD7DB;
+} */
+=======
+>>>>>>> master
 
 .box1 {
   border-radius: 6px;
@@ -108,6 +119,8 @@ nav ul {
 
 
 
+=======
+>>>>>>> 3e8c2f7fcc223d39e36cecfd811a6bc528f89698
 
 section div {
   text-align: justify;
@@ -134,15 +147,16 @@ h1 {
   font-size: 35px;
 }
 
-footer, footer h3, footer div {
-  box-sizing: border-box;
+footer footer h3 {
+  border: 1px solid #AFD7DB;
   background-color: #AFD7DB;
 }
 
+}
 footer {
   /*border: 1px dashed green;*/
   width: 100%;
-  height: 100%;
+  height: 150px;
 }
 
 footer h3 {

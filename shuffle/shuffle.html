@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel = "stylesheet" href = "../style/nav-bar.css">
     <link rel = "stylesheet" href = "shuffle.css">
     <title></title>
   </head>
@@ -13,31 +14,32 @@
         <ul>
           <li>
             <div class="rotating">
-              <figure class="box1"> <a href="../index.html">Home</a></figure>
+              <figure class="box1"><div  id="logo"><a href="../index.html"> Algorithms</a></div></figure>
             </div>
           </li>
-          <li class="dropdown">
-            <h2 id="dropdownAlgorithms">Algorithms</h2>
-            <div class="dropdown-content">
-              <h3 class="algoHeading">Sorting</h3>
-                <a href="../bubble.html">Bubble Sort</a>
-                <br />
-                <a href="../insertion.html">Insertion Sort</a>
-                <br />
-                <a href="../selection.html">Selection Sort</a>
-                <br />
-                <a href="../bubble.html">Quick Sort</a>
-              <h3 class="algoHeading">Searching</h3>
-                <a href="../linear-search/linear-search.html">Linear Search</a>
-                <br />
-                <a href="../binary-search/binary-search.html">Binary Search</a>
-              <h3 class="algoHeading">Shuffling</h3>
-                <a href="shuffle.html">Fisher Bates</a>
-            </div>
-          </li>
-          <li>
+          <li id="floatRight">
             <a href="../about.html" id="aboutLink">About us</a>
           </li>
+          <li class="dropdown" id="floatRight">
+            <h2 id="dropdownAlgorithms">Tutorials</h2>
+            <div class="dropdown-content">
+              <h3 class="algoHeading">Sorting</h3>
+                <a href="../html/bubble.html">Bubble Sort</a>
+                <br />
+                <a href="../html/insertion.html">Insertion Sort</a>
+                <br />
+                <a href="../html/selection.html">Selection Sort</a>
+                <br />
+                <a href="../html/bubble.html">Quick Sort</a>
+              <h3 class="algoHeading">Searching</h3>
+                <a href="../html/linear-search.html">Linear Search</a>
+                <br />
+                <a href="../html/binary-search.html">Binary Search</a>
+              <h3 class="algoHeading">Shuffling</h3>
+                <a href="../shuffle/shuffle.html">Fisher Bates</a>
+            </div>
+          </li>
+
         </ul>
       </nav>
 
