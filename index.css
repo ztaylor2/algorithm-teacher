@@ -1,29 +1,15 @@
-<<<<<<< HEAD
+
 body {
   background-color: #EFD8A1;
   font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
-
-
-
 /*nav bar start*/
-
 header {
   background-color: #3D9CA8;
   display: block;
 }
-<<<<<<< HEAD
-/* figure {
-  background-color: #AFD7DB;
-} */
-/*
-figure .box1 {
-    background-color: #AFD7DB;
-} */
-=======
->>>>>>> master
 
 .box1 {
   border-radius: 6px;
@@ -90,6 +76,13 @@ figure .box1 {
   color: #3D9CA8;
 }
 
+header h1{
+  color: #AF7575;
+  font-weight: bold;
+  font-size: 40px;
+  top: 100px;
+}
+
 nav ul li {
   color: #3D9CA8;
   display: inline-block;
@@ -117,21 +110,26 @@ nav ul {
 
 /*nav bar ends*/
 
-
-
-=======
->>>>>>> 3e8c2f7fcc223d39e36cecfd811a6bc528f89698
-
 section div {
-  text-align: justify;
+  text-align: left;
   font-size: 40px;
   font-style: italic;
   font-family: sans-serif;
 }
 
+.algorithmHeading {
+  max-width: 960px;
+  margin: auto;
+}
+
 div {
   margin: 20px 10px
   border: green bold;
+}
+
+ul {
+text-align: left;
+padding-left: 25px;
 }
 
 .algorithm {
@@ -140,12 +138,33 @@ div {
   text-decoration: underline wavy #BCD693;
 }
 
+#algorithmNames {
+  margin-top: 50px;
+  margin-left: 0px;
+  text-align: left;
+}
+
+li {
+  list-style-type: none;
+  color: #D68FBA;
+  /*padding-left: 20px;*/
+}
+
 h1 {
   margin-top: 50px;
+  margin-left: 0px;
   color: #AF7575;
   font-weight: bold;
   font-size: 35px;
 }
+
+.personal_info {
+  max-width: 960px;
+  margin:auto;
+}
+
+footer, footer h3, footer div {
+  box-sizing: border-box;
 
 footer footer h3 {
   border: 1px solid #AFD7DB;
@@ -163,7 +182,7 @@ footer h3 {
   width: 100%;
   height: 20%;
   color: #AF7575;
-  font-size: 14px;
+  font-size: 18px;
   float: left;
   text-align: center;
   padding-top: 1%;
