@@ -1,20 +1,15 @@
 'use strict';
 
 function homeButton_Click(){
-  var personName_input =
-  alert('Welcome, enjoy learning algorithms!');
+  var homePageHello = document.createElement('button');
+  homePageHello.setAttribute('id','homePageHello');
+  homePageHello.style.width = '40px';
+  homePageHello.style.height = '50px';
+  homePageHello.style.backgroundcolor = '#C7D7DB';
+  homePageHello.style.color = '#EFD8A1';
+  homePageHello.style.zIndez = '3';
+  document.body.appendChild(homePageHello);
 }
 
-// function processButton(e) {
-//   var buttonEl = document.createElement('button');
-//   buttonEl.textContent = buttonEl;
-//   section.appendChild(buttonEl);
-// };
-//
-// document.getElementById('button').addEventListener('click', handleClick);{
-//
-// function handleClick(e){
-//     if (e.target.id === 'handleClick') {
-//       alert('Welcome, ' + personalInfo + ', enjoy learning algorithms!')
-//     }
-//   }
+
+document.getElementById('personName_input').addEventListener('click', homeButton_Click);

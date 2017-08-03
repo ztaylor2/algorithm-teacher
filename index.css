@@ -133,10 +133,16 @@ padding-left: 25px;
   text-decoration: underline wavy #BCD693;
 }
 
+#algorithmNames {
+  margin-top: 50px;
+  margin-left: 20px;
+  text-align: left;
+}
+
 li {
   list-style-type: none;
   color: #D68FBA;
-  padding-left: 20px;
+  /*padding-left: 20px;*/
 }
 
 h1 {
