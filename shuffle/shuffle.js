@@ -33,8 +33,6 @@ function shuffle(event) {
   // var tempValue;
   // var randomIndex;
 
-
-
   if (currentIndex !== 0){
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
@@ -50,10 +48,19 @@ function shuffle(event) {
       message50(randomIndex);
     }
 
+    if (currentIndex === 49){
+      stop();
 
+      message49();
+    }
 
-    displayRandomIndex = cardNames[randomIndex];
+    // for display purposes
     displayTemp = cardNames[currentIndex];
+    displayRandomIndex = cardNames[randomIndex];
+    cardNames[currentIndex] = cardNames[randomIndex];
+    cardNames[randomIndex] = displayTemp;
+
+    // actual code
     tempValue = deck[currentIndex];
     deck[currentIndex] = deck[randomIndex];
     deck[randomIndex] = tempValue;
@@ -68,20 +75,17 @@ function shuffle(event) {
       play();
     } else if (pressPlay === true && currentIndex === 0) {
       pressPlay = false;
-      alert('Congratulations! You\'ve shuffled the deck!');
+      // alert('Congratulations! You\'ve shuffled the deck!');
       currentIndex = deck.length;
       document.getElementById('step').addEventListener('click',shuffle);
     }
   } else {
-    alert('Congratulations! You\'ve shuffled the deck!');
+    // alert('Congratulations! You\'ve shuffled the deck!');
     currentIndex = deck.length;
   }
 }
 
 /*________________________ function to first display cards ____________________*/
-
-
-
 
 function welcome() {
 
@@ -248,6 +252,61 @@ function removeMessage50() {
   document.getElementById('message50Div').remove();
 }
 
+function message49() {
+  var message49Div = document.createElement('div');
+  var message49Button = document.createElement('button');
+  var message49Span = document.createElement('span');
+  var message49Header = document.createElement('h1');
+  var message49Message = document.createElement('p');
+  message49Div.style.position = 'relative';
+  message49Div.style.border = 'solid';
+  message49Div.style.width = '500px';
+  message49Div.style.height = '300px';
+  message49Div.style.zIndex = '3';
+  message49Div.style.backgroundColor = 'white';
+  message49Div.style.borderRadius = '5px';
+  message49Div.style.margin = '0 auto';
+  message49Div.style.boxShadow = '0px 0px 100px #000000';
+  message49Div.style.textAlign = 'center';
+  message49Div.setAttribute('id','message49Div');
+
+  document.body.appendChild(message49Div);
+
+  message49Button.setAttribute('id', 'message49Button');
+  message49Button.style.position = 'relative';
+  message49Button.style.margin = '20px';
+  message49Button.style.top = '230px';
+  message49Button.style.padding = '15px';
+
+  message49Span.textContent = 'Continue';
+
+  message49Header.style.fontSize = '24px';
+  message49Header.textContent = 'Repeat!';
+  message49Header.style.position = 'relative';
+  message49Header.style.bottom = '60px';
+
+  message49Message.textContent = 'Thats all there is to it! Now just press play and watch the shuffle do its magic! Check out the \'Show Code\' button to watch the code at work.';
+  message49Message.style.position = 'relative';
+  message49Message.style.bottom = '48px';
+  message49Message.style.fontSize = '18px';
+  message49Message.style.padding = '10px';
+  message49Message.style.fontFamily = 'sans-serif';
+  message49Message.style.lineHeight = '26px';
+
+  message49Button.appendChild(message49Span);
+  message49Div.appendChild(message49Button);
+  message49Div.appendChild(message49Header);
+  message49Div.appendChild(message49Message);
+
+  document.getElementById('message49Button').addEventListener('click', removeMessage49);
+
+}
+
+function removeMessage49() {
+  // play();
+  document.getElementById('message49Div').remove();
+}
+
 function seeCode() {
   iWantTheCode = true;
   showCode();
@@ -262,12 +321,8 @@ function showCode(){
   var showCodeButton = document.createElement('button');
   var showCodeSpan = document.createElement('span');
   var showCodeHeader = document.createElement('h1');
-  var showCodeMessageFunction = document.createElement('p');
-  var showCodeMessageTempValue = document.createElement('p');
   var showCodeMessageRandomIndex = document.createElement('p');
   var showCodeMessageCurrentIndex = document.createElement('p');
-  var showCodeMessageIf = document.createElement('p');
-  var showCodeMessageRandomMath = document.createElement('p');
   var showCodeMessageNewCurrentIndex = document.createElement('p');
   var showCodeMessageAssignTemp = document.createElement('p');
   var showCodeMessageSwap = document.createElement('p');
@@ -282,7 +337,6 @@ function showCode(){
   showCodeDiv.style.borderRadius = '5px';
   showCodeDiv.style.margin = '0 auto';
   showCodeDiv.style.boxShadow = '0px 0px 100px #000000';
-  // showCodeDiv.style.padding = '10px';
   showCodeDiv.setAttribute('id','showCodeDiv');
 
   document.body.appendChild(showCodeDiv);
@@ -301,34 +355,6 @@ function showCode(){
   showCodeHeader.textContent = 'Fisher-Yates Shuffle';
   showCodeHeader.style.position = 'relative';
   showCodeHeader.style.bottom = '100px';
-
-
-  // showCodeMessageFunction.setAttribute('id','showCodeMessageFunction');
-  // showCodeMessageTempValue.setAttribute('id','showCodeMessageTempValue');
-  //
-  // showCodeMessageIf.setAttribute('id','showCodeMessageIf');
-  // showCodeMessageRandomMath.setAttribute('id','showCodeMessageRandomMath');
-  // showCodeMessageNewCurrentIndex.setAttribute('id','showCodeMessageNewCurrentIndex');
-  // showCodeMessageAssignTemp.setAttribute('id','showCodeMessageAssignTemp');
-  // showCodeMessageSwap.setAttribute('id','showCodeMessageSwap');
-  // showCodeMessageRandomToTemp.setAttribute('id','showCodeMessageRandomToTemp');
-  //
-  // showCodeMessageFunction.textContent = 'function shuffle() {';
-  // showCodeMessageTempValue.textContent = 'var tempValue;';
-  //
-
-  // showCodeMessageIf.textContent = 'if(currentIndex !== 0)';
-  // showCodeMessageRandomMath.textContent = 'randomIndex = Math.floor(Math.random() * currentIndex);';
-  // showCodeMessageNewCurrentIndex.textContent = 'currentIndex--;';
-  // showCodeMessageAssignTemp.textContent = 'tempValue = deck[currentIndex];';
-  // showCodeMessageSwap.textContent = 'deck[currentIndex] = deck[randomIndex];';
-  // showCodeMessageRandomToTemp.textContent = 'deck[randomIndex] = tempValue;';
-  //
-  // showCodeMessageFunction.style.position = 'relative';
-  // showCodeMessageFunction.style.bottom = '110px';
-  // showCodeMessageFunction.style.fontSize = '14px';
-  // showCodeMessageFunction.style.padding = '4px';
-  // showCodeMessageFunction.style.fontFamily = 'sans-serif';
 
   showCodeMessageCurrentIndex.setAttribute('id','showCodeMessageCurrentIndex');
   showCodeMessageCurrentIndex.textContent = '// currentIndex  ' + currentIndex;
@@ -380,20 +406,14 @@ function showCode(){
 
   showCodeButton.appendChild(showCodeSpan);
   showCodeDiv.appendChild(showCodeButton);
-  // showCodeDiv.appendChild(showCodeHeader);
-  // showCodeDiv.appendChild(showCodeMessageFunction);
-  // showCodeDiv.appendChild(showCodeMessageTempValue);
   showCodeDiv.appendChild(showCodeMessageRandomIndex);
   showCodeDiv.appendChild(showCodeMessageCurrentIndex);
-  // showCodeDiv.appendChild(showCodeMessageIf);
-  // showCodeDiv.appendChild(showCodeMessageRandomMath);
   showCodeDiv.appendChild(showCodeMessageNewCurrentIndex);
   showCodeDiv.appendChild(showCodeMessageAssignTemp);
   showCodeDiv.appendChild(showCodeMessageSwap);
   showCodeDiv.appendChild(showCodeMessageRandomToTemp);
 
   document.getElementById('showCodeButton').addEventListener('click', hideCode);
-
 }
 
 function hideCode(){
@@ -473,7 +493,9 @@ function play(){
 
   document.getElementById('step').removeEventListener('click',shuffle);
   pressPlay = true;
-  if (currentIndex !== 0){
+  if (currentIndex === 52) {
+    var myTimeout = setTimeout(shuffle, 100);
+  } else if (currentIndex !== 0){
     var myTimeout = setTimeout(shuffle, 1500);
   }
   document.getElementById('play').innerHTML = 'Stop';
