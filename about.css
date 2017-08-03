@@ -1,3 +1,137 @@
+<<<<<<< HEAD
+=======
+body {
+  background-color: #EFD8A1;
+  font-family: Helvetica, sans-serif;
+  /*outline: 1px dashed orange;*/
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+/*nav bar start*/
+
+header {
+  background-color: #3D9CA8;
+  display: block;
+}
+
+.box1 {
+  border-radius: 6px;
+  background: #BCD693;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  width: 60px;
+  margin: 15px;;
+  padding: 0;
+  transform: rotate(-55deg);
+}
+
+.rotating {
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.rotating:hover {
+    animation: rotating 5s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/*dropdown stuff*/
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  padding-top: 0px;
+  z-index: 1;
+}
+
+.dropdown:hover {
+  cursor: pointer;
+}
+
+#dropdownAlgorithms {
+  padding: 23px;
+}
+
+#aboutLink {
+  padding: 23px;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding-left: 20px;
+  color: #3D9CA8;
+}
+
+nav ul li {
+  color: #3D9CA8;
+  display: inline-block;
+  margin-right: 50px;
+  margin-left: 0px;
+  /*padding: 20px;*/
+}
+
+nav ul li a, #dropdownAlgorithms {
+  font-weight: lighter;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.algoHeading {
+  font-size: 18px;
+  color: #BCD693;
+}
+
+/*nav bar ends*/
+
+
+
+
+
+
+/*
+
+
+header {
+  background-color: #AFD7DB;
+  padding: 15px;
+  font-size: 25px;
+  display: block;
+  margin-bottom: 100px;
+}
+
+.flat .box {
+  border-radius: 6px;
+}
+>>>>>>> master
 
 div{
   border: 1px dashed black;
@@ -16,6 +150,9 @@ div{
   margin-bottom: 0px;
 }
 
+nav {
+  margin-bottom: 50px;
+}
 
 #subHeading{
   font-size: 20px;
@@ -25,29 +162,12 @@ div{
   font-family: sans-serif;
 }
 
-/*-------------------NAVIGATION---------------*/
-
-/*button.link {
-    font-size: 20px;
-    color: #AF7575;
-    background:none;
-    border:none;
-  }*/
-
-
-/*nav {
-   border: 2px solid black;
-   height: 30px;
-   width: 1100px;
-   margin: auto;
+div {
+  margin: 20px 10px
+  border: green bold;
 }
 
-nav ul {
-list-style: none;
-display: inline;
-margin: 0;
-padding: 0;
-}
+
 /*-----------------IMAGES-------------*/
 .dialog{
 margin-top: 50px;
