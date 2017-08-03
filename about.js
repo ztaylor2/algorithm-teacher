@@ -28,14 +28,16 @@ function zachBio(){
   zachBioDiv.style.borderTopColor = '#BCD693';
   zachBioDiv.style.borderTopWidth = '20px';
   zachBioDiv.style.fontSize = '20px';
+  zachBioDiv.style.textAlign = 'center';
   zachBioDiv.style.fontFamily = 'italic';
-  zachBioDiv.style.overflow = 'hidden';
+  zachBioDiv.style.overflow = 'scroll';
   document.body.appendChild(zachBioDiv);
 
   zachButton.setAttribute('id', 'zachButton');
   zachButton.style.position = 'relative';
   zachButton.style.margin = '0px';
-  zachButton.style.top = '200px';
+  zachButton.style.top = '175px';
+  zachButton.style.left = '110px';
   zachButton.style.padding = '15px';
 
 
@@ -44,7 +46,7 @@ function zachBio(){
 
 
   zachBioText.setAttribute('id', 'zachBioText');
-  zachBioText.textContent = 'Hi my name is Zach I went to Gonzaga, algorithms are fun';
+  zachBioText.textContent = 'Zach Taylor graduated from Gonzaga University cum laude with a degree in mechanical engineering.  He has been interested in software development for a while now so he decided to attend Codefellows and become a software engineer.';
   zachBioText.style.position = 'absolute';
   zachBioText.style.fontFamily = 'sans-serif';
   zachBioText.style.color = 'white';
@@ -84,6 +86,8 @@ function ivetteBio(){
     document.getElementById('ivetteBioDiv').remove();
   }
   var ivetteBioDiv = document.createElement('div');
+  var ivetteBioText = document.createElement('textContent');
+
   ivetteBioDiv.setAttribute('id', 'ivetteBioDiv');
   ivetteBioDiv.style.width = '300px';
   ivetteBioDiv.style.height = '225px';
@@ -104,9 +108,9 @@ function ivetteBio(){
   document.body.appendChild(ivetteBioDiv);
 
 
-  var ivetteBioText = document.createElement('textContent');
+
   ivetteBioText.setAttribute('id', 'ivetteBioText');
-  ivetteBioText.textContent = 'Hey there! My name is Ivette.  I studied improv comedy at Second City, taught middle school and am now coding coding coding.  Come by, say "Hi", I love meeng new people tada!';
+  ivetteBioText.textContent = 'Hey there! My name is Ivette.  I studied improv comedy at Second City, taught middle school and am now coding coding coding.  Come by, say "Hi", I love meeting new people!';
   ivetteBioText.style.position = 'relative';
   ivetteBioText.style.fontFamily = 'sans-serif';
   ivetteBioText.style.color = 'white';
