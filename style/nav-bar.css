@@ -23,9 +23,20 @@ header {
   transform: rotate(-55deg);
 }
 
+#logo {
+  font-family: cursive;
+  transform: rotate(55deg);
+}
+
+#logo a {
+  font-size: 30px;
+}
+
+
 .rotating {
   cursor: pointer;
   transform-style: preserve-3d;
+  margin-right: 70px;
 }
 
 .rotating:hover {
@@ -62,10 +73,7 @@ header {
   padding: 23px;
 }
 
-#aboutLink {
-  padding: 23px;
-  cursor: pointer;
-}
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -98,4 +106,14 @@ nav ul {
 .algoHeading {
   font-size: 18px;
   color: #BCD693;
+}
+
+#floatRight {
+  float: right;
+}
+
+#aboutLink {
+  display: inline-block;
+  padding: 36px;
+  cursor: pointer;
 }
