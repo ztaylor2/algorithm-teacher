@@ -14,7 +14,7 @@ function zachBio(){
   var zachSpan = document.createElement('span');
 
   zachBioDiv.setAttribute('id', 'zachBioDiv');
-  zachBioDiv.style.width = '300px';
+  zachBioDiv.style.width = '375px';
   zachBioDiv.style.height = '225px';
   zachBioDiv.style.margin = 'auto';
   zachBioDiv.style.background = 'white';
@@ -37,7 +37,7 @@ function zachBio(){
   zachButton.style.position = 'relative';
   zachButton.style.margin = '0px';
   zachButton.style.top = '175px';
-  zachButton.style.left = '110px';
+  zachButton.style.left = '0px';
   zachButton.style.padding = '15px';
 
 
@@ -112,8 +112,8 @@ function ivetteBio(){
   ivetteButton.setAttribute('id', 'ivetteButton');
   ivetteButton.style.position = 'relative';
   ivetteButton.style.margin = '0px';
-  ivetteButton.style.top = '0px';
-  ivetteButton.style.left = '0px';
+  ivetteButton.style.top = '30px';
+  ivetteButton.style.left = '105px';
   ivetteButton.style.padding = '15px';
 
   ivetteSpan.textContent = 'Continue';
@@ -178,14 +178,14 @@ function johnBio(){
   johnBioDiv.style.borderTopWidth = '20px';
   johnBioDiv.style.fontSize = '20px';
   johnBioDiv.style.fontFamily = 'italic';
-  johnBioDiv.style.overflow = 'scroll';
+  // johnBioDiv.style.overflow = 'scroll';
   document.body.appendChild(johnBioDiv);
 
   johnButton.setAttribute('id', 'johnButton');
   johnButton.style.position = 'relative';
   johnButton.style.margin = '0px';
-  johnButton.style.top = '175px';
-  johnButton.style.left = '110px';
+  johnButton.style.top = '100px';
+  johnButton.style.right = '50px';
   johnButton.style.padding = '15px';
 
   johnSpan.textContent = 'Continue';
@@ -262,9 +262,10 @@ function danielBio(){
   danielButton.setAttribute('id', 'danielButton');
   danielButton.style.position = 'relative';
   danielButton.style.margin = '0px';
-  danielButton.style.top = '175px';
-  danielButton.style.left = '110px';
+  danielButton.style.top = '50px';
+  danielButton.style.left = '15px';
   danielButton.style.padding = '15px';
+  // danielButton.style.zIndex = '5';
 
   danielSpan.textContent = 'Continue';
   danielButton.appendChild(danielSpan);
@@ -297,25 +298,3 @@ function removeDanielButton(){
     document.getElementById('danielBioDiv').remove();
   }
 }
-
-
-
-
-
-
-// document.getElementById('zach').addEventListener('click', function clickZach(event){
-//   window.alert('');
-// });
-
-// document.getElementById('ivette').addEventListener('click', function clickIvette(event){
-//   window.alert('Hey there! My name is Ivette.  I studied improv comedy at Second City, taught middle school and am now coding coding coding.  Come by, say "Hi", I love meeng new people tada!');
-// });
-
-// document.getElementById('john').addEventListener('click', function clickJohn(event){
-//   console.log('click John');
-//   window.alert('My name is ');
-// });
-
-// document.getElementById('daniel').addEventListener('click',  danielBio);
-// console.log('click Daniel');
-// alert('Hello! My name is Daniel Pillay. I was born and raised in Mountlake Terrace, WA and I am an Air Force veteran. I am glad we could help you guys learn algorithms!');
