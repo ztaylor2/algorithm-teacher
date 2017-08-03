@@ -35,14 +35,16 @@ function zachBio(){
   zachButton.setAttribute('id', 'zachButton');
   zachButton.style.position = 'relative';
   zachButton.style.margin = '0px';
-  zachButton.style.top = '0px';
+  zachButton.style.top = '200px';
   zachButton.style.padding = '15px';
 
+
   zachSpan.textContent = 'Continue';
+  zachButton.appendChild(zachSpan);
 
 
   zachBioText.setAttribute('id', 'zachBioText');
-  zachBioText.textContent = 'Hi my name is Zach I went to Gonzaga...';
+  zachBioText.textContent = 'Hi my name is Zach I went to Gonzaga, algorithms are fun';
   zachBioText.style.position = 'absolute';
   zachBioText.style.fontFamily = 'sans-serif';
   zachBioText.style.color = 'white';
@@ -55,17 +57,22 @@ function zachBio(){
   zachBioText.style.verticalAlign = 'middle';
   zachBioText.style.textAlign = 'center';
   zachBioDiv.appendChild(zachBioText);
-  zachButton.appendChild(zachSpan);
   zachBioDiv.appendChild(zachButton);
+  zachButton.appendChild(zachSpan);
 
+  document.getElementById('zachButton').addEventListener('click', removeZachButton);
 }
 document.getElementById('zach').addEventListener('click', zachBio);
-document.getElementById('zachButton').addEventListener('click', removeZachButton);
-
 
 function removeZachButton(){
-  document.getElementById(zachBioDiv).remove();
+  if(zachBioDiv){
+    document.getElementById('zachBioDiv').remove();
+  }
 }
+
+
+
+
 
 
 
