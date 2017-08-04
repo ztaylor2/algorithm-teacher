@@ -21,7 +21,8 @@ function zachBio(){
   zachBioDiv.style.border = 'solid';
   zachBioDiv.style.position = 'relative';
   zachBioDiv.style.zIndex = '1';
-  zachBioDiv.style.bottom = '800px';
+  zachBioDiv.style.bottom = '900px';
+  zachBioDiv.style.right = '222px';
   zachBioDiv.style.backgroundColor = '#3D9CA8';
   zachBioDiv.style.borderRadius = '10px';
   zachBioDiv.style.borderColor = 'BCD693';
@@ -98,7 +99,8 @@ function ivetteBio(){
   ivetteBioDiv.style.border = 'solid';
   ivetteBioDiv.style.position = 'relative';
   ivetteBioDiv.style.zIndex = '1';
-  ivetteBioDiv.style.bottom = '800px';
+  ivetteBioDiv.style.bottom = '900px';
+  ivetteBioDiv.style.left = '230px';
   ivetteBioDiv.style.backgroundColor = '#3D9CA8';
   ivetteBioDiv.style.borderRadius = '10px';
   ivetteBioDiv.style.borderColor = 'BCD693';
@@ -170,7 +172,8 @@ function johnBio(){
   johnBioDiv.style.border = 'solid';
   johnBioDiv.style.position = 'relative';
   johnBioDiv.style.zIndex = '0';
-  johnBioDiv.style.bottom = '800px';
+  johnBioDiv.style.bottom = '535px';
+  johnBioDiv.style.right = '215px';
   johnBioDiv.style.backgroundColor = '#3D9CA8';
   johnBioDiv.style.borderRadius = '10px';
   johnBioDiv.style.borderColor = 'BCD693';
@@ -247,7 +250,8 @@ function danielBio(){
   danielBioDiv.style.border = 'solid';
   danielBioDiv.style.position = 'relative';
   danielBioDiv.style.zIndex = '0';
-  danielBioDiv.style.bottom = '800px';
+  danielBioDiv.style.bottom = '525px';
+  danielBioDiv.style.left = '225px';
   danielBioDiv.style.backgroundColor = '#3D9CA8';
   danielBioDiv.style.borderRadius = '10px';
   danielBioDiv.style.borderColor = 'BCD693';
@@ -272,7 +276,7 @@ function danielBio(){
 
 
   danielBioText.setAttribute('id', 'danielBioText');
-  danielBioText.textContent = 'Hello! My name is Daniel Pillay. I was born and raised in Mountlake Terrace, WA and I am an Air Force veteran. I am glad we could help you guys learn algorithms!';
+  danielBioText.textContent = 'Hello! My name is Daniel Pillay. I was born and raised in Mountlake Terrace, WA and I am an Air Force veteran. On my free time I enjoy training Brazlilian Jiu Jitsu and I dabble in Muay Thai. I have always been into technology and decided to pursue coding when I got out of the military.';
   danielBioText.style.position = 'relative';
   danielBioText.style.fontFamily = 'sans-serif';
   danielBioText.style.color = 'white';

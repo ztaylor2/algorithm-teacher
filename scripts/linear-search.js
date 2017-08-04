@@ -9,7 +9,7 @@ var description = document.getElementById('description');
 var descriptionTextContent = [];
 
 descriptionTextContent.push('We look at the first number in the array and compare it to 7.  6 doesn\'t equal 7, so we move to the next index in the array. ');
-descriptionTextContent.push('3 doesn\'t equal 1 either, so we move on the the next number.');
+descriptionTextContent.push('3 doesn\'t equal 7 either, so we move on the the next number.');
 descriptionTextContent.push('This process repeats until 7 is found.');
 descriptionTextContent.push('This process repeats until 7 is found.');
 descriptionTextContent.push('This process repeats until 7 is found.');
