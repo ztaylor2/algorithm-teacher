@@ -1,15 +1,14 @@
 
-
 body {
   background-color: white;
   font-family: Helvetica, sans-serif;
-  margin-bottom: 0px;
-  padding-bottom: : 0px;
+  margin: 0;
+  padding: 0;
   height: 100%;
 }
 
 #siteHeading{
-  color: #AF7575;
+  color: #3D9CA8;
   font-weight: bold;
   font-size: 40px;
   text-align: center;
@@ -37,10 +36,15 @@ div {
 
 
 /*-----------------IMAGES-------------*/
+
 .groupPhoto{
+  display: block;
+  margin: auto;
   margin-top: 50px;
-  margin-left: 300px;
+  text-align: center;
 }
+
+
 
 #zach{
   height:405px;
@@ -88,6 +92,7 @@ div {
   margin-right: 25px;
   border: 3px solid #3D9CA8;
   border-radius: 10px;
+  margin-bottom: 100px;
 }
 #john:hover{
   border: 5px solid #3D9CA8;
@@ -106,6 +111,7 @@ div {
   width:400px;
   border: 3px solid #3D9CA8;
   border-radius: 10px;
+  margin-bottom: 100px;
 }
 #daniel:hover{
   border: 5px solid #3D9CA8;
@@ -119,111 +125,25 @@ div {
 }
 
 
-
-#zachSocial{
-  position: absolute;
-  float: left;
-  position: relative;
-  bottom: 495px;
-  left: 310px;
-  opacity:0.5;
-
-}
-#zachSocial:hover{
-        opacity:1;
-}
-
-
-#ivetteSocial{
-  float: right;
-  position: relative;
-  bottom: 495px;
-  right: 260px;
-  opacity:0.5;
-}
-#ivetteSocial:hover{
-        opacity:1;
-}
-
-#johnSocial{
-  float: left;
-  position: relative;
-  bottom: 55px;
-  left: 130px;
-  opacity:0.5;
-}
-#johnSocial:hover{
-        opacity:1;
-}
-
-#danielSocial{
-  float: right;
-  position: relative;
-  bottom: 55px;
-  right: 80px;
-  opacity:0.5;
-}
-#danielSocial:hover{
-        opacity:1;
-}
-
 footer{
-  text-align: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 50px;
   width: 100%;
-  height: 15%;
-  border: 1px solid #AFD7DB;
-  background: #B2D4DB;
-  vertical-align: text-bottom;
-
+  text-align: center;
+  height: 50px;
+  background: #3D9CA8;
+  vertical-align: middle;
 }
 
 #footerHead{
+  display: block;
+  padding: 16px;
+  margin: 0;
   color: white;
   text-align: center;
-  margin-bottom: auto;
-  font: 15px arial, sans-serif
+  font: 15px arial, sans-serif;
+  vertical-align: middle;
 }
-/*#groupPhoto{
-  display: inline-block;
-}*/
-
-
-/*#groupPhoto{
-  display: block;
-  margin: auto;
-  margin-top: 50px;
-  padding-left: 275px;
-
-}
-#setOne{
-  padding-bottom: 50px;
-
-}
-
-#zach{
-  width: 400px;
-  height: 405px;
-  padding-right: 50px;
-
-}
-#ivette{
-  width: 400px;
-  height: 405px;
-
-}
-
-#setTwo{
-  padding-bottom: 50px;
-}
-#john{
-  width: 400px;
-  height: 405px;
-  padding-right: 50px;
-
-}
-
-#daniel{
-  width: 400px;
-  height: 405px;
-
-}*/

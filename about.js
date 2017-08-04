@@ -20,6 +20,7 @@ function zachBio(){
   zachBioDiv.style.background = 'white';
   zachBioDiv.style.border = 'solid';
   zachBioDiv.style.position = 'relative';
+  zachBioDiv.style.padding = '30px';
   zachBioDiv.style.zIndex = '1';
   zachBioDiv.style.bottom = '900px';
   zachBioDiv.style.right = '222px';
@@ -98,6 +99,7 @@ function ivetteBio(){
   ivetteBioDiv.style.background = 'white';
   ivetteBioDiv.style.border = 'solid';
   ivetteBioDiv.style.position = 'relative';
+  ivetteBioDiv.style.padding = '30px';
   ivetteBioDiv.style.zIndex = '1';
   ivetteBioDiv.style.bottom = '900px';
   ivetteBioDiv.style.left = '230px';
@@ -171,6 +173,7 @@ function johnBio(){
   johnBioDiv.style.background = 'white';
   johnBioDiv.style.border = 'solid';
   johnBioDiv.style.position = 'relative';
+  johnBioDiv.style.padding = '30px';
   johnBioDiv.style.zIndex = '0';
   johnBioDiv.style.bottom = '535px';
   johnBioDiv.style.right = '215px';
@@ -244,8 +247,9 @@ function danielBio(){
 
   danielBioDiv.setAttribute('id', 'danielBioDiv');
   danielBioDiv.style.width = '300px';
-  danielBioDiv.style.height = '225px';
+  danielBioDiv.style.height = '300px';
   danielBioDiv.style.margin = 'auto';
+  danielBioDiv.style.padding = '30px';
   danielBioDiv.style.background = 'white';
   danielBioDiv.style.border = 'solid';
   danielBioDiv.style.position = 'relative';
@@ -265,9 +269,10 @@ function danielBio(){
 
   danielButton.setAttribute('id', 'danielButton');
   danielButton.style.position = 'relative';
-  danielButton.style.margin = '0px';
-  danielButton.style.top = '50px';
-  danielButton.style.left = '15px';
+  danielButton.style.display = 'block';
+  danielButton.style.margin = 'auto';
+  danielButton.style.top = '30px';
+  danielButton.style.left = '0px';
   danielButton.style.padding = '15px';
   // danielButton.style.zIndex = '5';
 
